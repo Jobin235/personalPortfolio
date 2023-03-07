@@ -1,0 +1,68 @@
+.heroContainer {
+  position: relative;
+  width: 100%;
+  height: 33rem;
+}
+
+.gradientContainer {
+  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.gradientCircle {
+  width: 25rem;
+  height: 25rem;
+  background: linear-gradient(0deg, #29c64a, #0091e0);
+  border-radius: 50%;
+  transform: rotate(0deg);
+  animation: animate 6s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.imageContainer {
+  width: 30rem;
+  height: 25rem;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(2px 4px 6px black);
+  object-fit: cover;
+  object-position: top 28% left 25px;
+}
+
+.nameContainer {
+  z-index: 2;
+  position: absolute;
+  width: 100%;
+  bottom: -1.5%;
+}
+
+.nameContainer p {
+  font-size: 6rem;
+  font-weight: 1000;
+  text-align: center;
+  margin: 0;
+  line-height: 82px;
+  filter: drop-shadow(2px 4px 6px black);
+  background: -webkit-linear-gradient(90deg,#00c461, #c2fa39);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+}

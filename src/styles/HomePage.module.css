@@ -1,0 +1,45 @@
+.smallHead {
+  margin: 0;
+  font-size: 1.5em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  font-weight: bold;
+}
+
+.smallHeadTyped {
+  margin: 0;
+  font-size: 1.5em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.largeHead {
+  margin: 0;
+  font-size: 2em;
+  font-weight: bold;
+  text-shadow: 0px 1px #000000, 1px 0px #969592, -1px 2px #000000,
+    -2px 1px #969592;
+}
+
+.wheelSvg {
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Small devices (landscape & portrait phones, upto 768px) */
+@media (max-width: 768px) {
+  .wheelSvg svg {
+    width: 490px;
+    height: 490px;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+  .wheelSvg svg {
+    width: 290px;
+    height: 290px;
+  }
+}

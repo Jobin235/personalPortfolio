@@ -1,0 +1,171 @@
+.aboutImage {
+  height: 80px;
+  width: 80px;
+  filter: grayscale(1) drop-shadow(rgba(0, 0, 0, 0.8) 3px 5px 2px);
+  transition: all 0.5s ease-in-out;
+  transform: translate(350px, 520px) rotateZ(337deg);
+}
+
+g:hover .aboutImage {
+  height: 100px;
+  width: 100px;
+  filter: grayscale(0) drop-shadow(rgba(0, 0, 0, 0.8) 3px 5px 2px);
+  transform: translate(330px, 500px) rotateZ(337deg);
+}
+
+.educationImage {
+  height: 80px;
+  width: 80px;
+  filter: grayscale(1) drop-shadow(rgba(0, 0, 0, 0.8) 3px 5px 2px);
+  transition: all 0.5s ease-in-out;
+  transform: translate(23px, 185px) rotateZ(337deg);
+}
+
+g:hover .educationImage {
+  height: 100px;
+  width: 100px;
+  filter: grayscale(0) drop-shadow(rgba(0, 0, 0, 0.8) 3px 5px 2px);
+  transform: translate(0px, 170px) rotateZ(337deg);
+}
+
+.skillsImage {
+  height: 80px;
+  width: 80px;
+  filter: grayscale(1) drop-shadow(rgba(0, 0, 0, 0.8) 3px 5px 2px);
+  transition: all 0.5s ease-in-out;
+  transform: translate(488px, 375px) rotateZ(337deg)
+}
+
+g:hover .skillsImage {
+  height: 100px;
+  width: 100px;
+  filter: grayscale(0) drop-shadow(rgba(0, 0, 0, 0.8) 3px 5px 2px);
+  transform: translate(466px, 365px) rotateZ(337deg)
+}
+
+.contactImage {
+  height: 80px;
+  width: 80px;
+  filter: grayscale(1) drop-shadow(rgba(0, 0, 0, 0.8) 3px 5px 2px);
+  transition: all 0.5s ease-in-out;
+  transform: translate(483px, 193px) rotateZ(337deg);
+}
+
+g:hover .contactImage {
+  height: 100px;
+  width: 100px;
+  filter: grayscale(0) drop-shadow(rgba(0, 0, 0, 0.8) 3px 5px 2px);
+  transform: translate(470px, 183px) rotateZ(337deg);
+}
+
+.portfolioImage {
+  height: 80px;
+  width: 80px;
+  filter: grayscale(1) drop-shadow(rgba(0, 0, 0, 0.8) 3px 5px 2px);
+  transition: all 0.5s ease-in-out;
+  transform: translate(25px, 380px) rotateZ(337deg);
+}
+
+g:hover .portfolioImage {
+  height: 100px;
+  width: 100px;
+  filter: grayscale(0) drop-shadow(rgba(0, 0, 0, 0.8) 3px 5px 2px);
+  transform: translate(12px, 370px) rotateZ(337deg);
+}
+
+.clientImage {
+  height: 80px;
+  width: 80px;
+  filter: grayscale(1) drop-shadow(rgba(0, 0, 0, 0.8) 3px 5px 2px);
+  transition: all 0.5s ease-in-out;
+  transform: translate(162px, 55px) rotateZ(337deg);
+}
+
+g:hover .clientImage {
+  height: 100px;
+  width: 100px;
+  filter: grayscale(0) drop-shadow(rgba(0, 0, 0, 0.8) 3px 5px 2px);
+  transform: translate(145px, 35px) rotateZ(337deg);
+}
+
+.experienceImage {
+  height: 80px;
+  width: 80px;
+  filter: grayscale(1) drop-shadow(rgba(0, 0, 0, 0.8) 3px 5px 2px);
+  transition: all 0.5s ease-in-out;
+  transform: translate(155px, 515px) rotateZ(337deg);
+}
+
+g:hover .experienceImage {
+  height: 100px;
+  width: 100px;
+  filter: grayscale(0) drop-shadow(rgba(0, 0, 0, 0.8) 3px 5px 2px);
+  transform: translate(140px, 500px) rotateZ(337deg);
+}
+
+.libraryImage {
+  height: 80px;
+  width: 80px;
+  filter: grayscale(1) drop-shadow(rgba(0, 0, 0, 0.8) 3px 5px 2px);
+  transition: all 0.5s ease-in-out;
+  transform: translate(350px, 50px) rotateZ(337deg);
+}
+
+g:hover .libraryImage {
+  height: 100px;
+  width: 100px;
+  filter: grayscale(0) drop-shadow(rgba(0, 0, 0, 0.8) 3px 5px 2px);
+  transform: translate(335px, 30px) rotateZ(337deg);
+}
+
+svg {
+  transform: rotate(22deg);
+}
+
+svg > text {
+  font-weight: 1000;
+  font-size: 1.6em;
+  text-shadow: 1px;
+}
+
+svg text,
+svg g text,
+svg g image {
+  transform: rotate(-22deg);
+}
+
+g path {
+  stroke: rgba(0, 0, 0, 0.3);
+  filter: drop-shadow(2px 4px 6px black);
+  stroke-width: 5px;
+  stroke-dasharray: 235.5 440;
+  transform-origin: center center;
+  transform: scale(0.98);
+  transform-box: fill-box;
+  transition: all 0.5s ease-in-out;
+}
+
+g text {
+  font-weight: 700;
+  stroke: black;
+}
+
+g.activeMenu path {
+  stroke: rgb(198, 207, 211);
+  stroke-width: 10px;
+  stroke-dasharray: 235.5 440;
+}
+
+g:hover {
+  cursor: pointer;
+}
+
+g:hover path {
+  fill: white;
+  transition: all 0.5s ease-in-out;
+  stroke-width: 0;
+}
+
+#hoveredMenuName {
+  fill: white;
+}
