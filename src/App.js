@@ -19,7 +19,7 @@ function App() {
 
   return (
     <div className="App">
-      <BrowserRouter>
+      <BrowserRouter basename="/personalPortfolio">
         <Routes>
           <Route
             path="/"

@@ -24,6 +24,7 @@ export default function WheelMenu(props) {
     if (redirect) {
       navigate(path);
     }
+    // eslint-disable-next-line
   }, [redirect]);
 
   const handleMouseEnter = (menu) => {
