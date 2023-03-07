@@ -5,7 +5,6 @@
 }
 
 .gradientContainer {
-  overflow: hidden;
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -32,19 +31,21 @@
 
 .imageContainer {
   width: 30rem;
-  height: 25rem;
+  height: 30rem;
   position: absolute;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
+  overflow: hidden;
 }
 
 .image {
   width: 100%;
-  height: 100%;
+  height: 35rem;
   filter: drop-shadow(2px 4px 6px black);
   object-fit: cover;
-  object-position: top 28% left 25px;
+  object-position: top 5% left 55px;
+  transform: rotate(10deg);
 }
 
 .nameContainer {

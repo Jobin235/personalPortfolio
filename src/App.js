@@ -1,6 +1,6 @@
 import "./App.css";
 import { useState } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
@@ -19,10 +19,9 @@ function App() {
 
   return (
     <div className="App">
-      <BrowserRouter basename="/personalPortfolio">
         <Routes>
           <Route
-            path="/"
+            path=""
             element={
               <HomePage
                 initialRender={initialRender}
@@ -43,7 +42,6 @@ function App() {
           <Route path="/clients" element={<ClientsPage />}></Route>
           <Route path="*" element={<ErrorPage />}></Route>
         </Routes>
-      </BrowserRouter>
     </div>
   );
 }
