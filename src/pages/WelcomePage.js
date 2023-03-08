@@ -6,16 +6,15 @@ import styles from "../styles/WelcomePage.module.css";
 export default function WelcomePage(props) {
   return (
     <div className={styles.container}>
-      <WelcomeHero />
+      <div className={styles.heroContainer}>
+        <WelcomeHero />
+      </div>
 
-      <p className={styles.smallHeadTyped}>
-        <Typed
-          strings={[
-            "Full-Stack Developer",
-          ]}
-          typeSpeed={80}
-        />
-      </p>
+      <div className={styles.textContainer}>
+        <p className={styles.smallHeadTyped}>
+          <Typed strings={["Full-Stack Developer"]} typeSpeed={80} />
+        </p>
+      </div>
 
       <div className={styles.buttonContainer}>
         <button

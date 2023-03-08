@@ -28,6 +28,14 @@
   overflow: hidden;
 }
 
+/* On screens that are 992px wide or less, go from four columns to two columns */
+@media screen and (max-height: 800px) {
+  .wheelSvg svg {
+    width: 400px;
+    height: 400px;
+  }
+}
+
 /* Small devices (landscape & portrait phones, upto 768px) */
 @media (max-width: 768px) {
   .wheelSvg svg {
