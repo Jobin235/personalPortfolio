@@ -1,11 +1,6 @@
 .App {
   margin: 0;
   padding: 0;
-  height: 100vh;
-  background: url("./assets/images/background.jpg") no-repeat center center;
-  background-color: rgb(32 33 30);
-  background-blend-mode: luminosity;
-  background-size: cover;
   color: white;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
@@ -13,4 +8,36 @@
 
 .App-link {
   color: #61dafb;
+}
+
+#backlit::before,
+#blacklit::after {
+  content: "";
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  background: linear-gradient(
+    45deg,
+    #29c64a,
+    #0091e0
+  );
+  background-size: 400%;
+  width: calc(100% + 5px);
+  height: calc(100% + 5px);
+  border-radius: 15px;
+  z-index: -1;
+  animation: animate 20s linear infinite;
+  /* filter: blur(20px); */
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
 }

@@ -22,7 +22,7 @@ export default function WheelMenu(props) {
   useEffect(() => {
     let path = "/" + props.currentMenu;
     if (redirect) {
-      navigate(path);
+      navigate(path, {currentMenu:props.currentMenu, setCurrentMenu: props.setCurrentMenu});
     }
     // eslint-disable-next-line
   }, [redirect]);

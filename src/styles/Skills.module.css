@@ -1,0 +1,13 @@
+.container{
+    background: rgb(39,39,39);
+    min-height: 200vh;
+}
+
+.headerText{
+    text-align: center;
+    padding: 6vh 10px 3vh 10px;
+    margin: 0;
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+ }

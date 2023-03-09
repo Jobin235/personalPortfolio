@@ -1,0 +1,51 @@
+.container {
+  background: rgb(39, 39, 39);
+  min-height: 200vh;
+  display: grid;
+  grid-template-columns: 80px auto 80px;
+}
+
+.headerText {
+  grid-column: 1/4;
+  text-align: center;
+  padding: 6vh 10px 3vh 10px;
+  margin: 0;
+  font-size: 3rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+/* On screens that are 772px wide or less*/
+@media screen and (max-width: 772px) {
+  .headerText {
+    font-size: 2rem;
+  }
+}
+
+/* On screens that are 420px wide or less*/
+@media screen and (max-width: 420px) {
+  .headerText {
+    font-size: 1.25rem;
+  }
+}
+
+/* On screens that are 572px high or less */
+@media screen and (max-height: 572px) {
+  .headerText {
+    padding-top: calc(6vh + 100px);
+  }
+}
+
+/* On screens that are 572px high and 992px wide or less */
+@media screen and (max-width: 992px) and (max-height: 572px) {
+  .headerText {
+    padding-top: calc(2vh + 100px);
+  }
+}
+
+/* On screens that are 572px high and 772px wide or less */
+@media screen and (max-width: 772px) and (max-height: 572px) {
+  .headerText {
+    padding-top: 6vh;
+  }
+}

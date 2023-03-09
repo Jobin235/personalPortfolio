@@ -13,6 +13,8 @@ import LibraryPage from "./pages/LibraryPage";
 import ClientsPage from "./pages/ClientsPage";
 import ErrorPage from "./pages/ErrorPage";
 
+import Layout from "./components/Layout";
+
 function App() {
   const [currentMenu, setCurrentMenu] = useState("About");
   const [initialRender, setInitialRender] = useState(true);
@@ -32,15 +34,33 @@ function App() {
             }
             exact
           ></Route>
-          <Route path="/about" element={<AboutPage />}></Route>
-          <Route path="/skills" element={<SkillsPage />}></Route>
-          <Route path="/work" element={<WorkPage />}></Route>
-          <Route path="/contact" element={<ContactPage />}></Route>
-          <Route path="/portfolio" element={<PortfolioPage />}></Route>
-          <Route path="/education" element={<EducationPage />}></Route>
-          <Route path="/library" element={<LibraryPage />}></Route>
-          <Route path="/clients" element={<ClientsPage />}></Route>
-          <Route path="*" element={<ErrorPage />}></Route>
+          <Route 
+          path="/about" 
+          element={<Layout children={<AboutPage />}></Layout>}></Route>
+          <Route 
+          path="/skills" 
+          element={<Layout><SkillsPage /></Layout>}></Route>
+          <Route 
+          path="/work" 
+          element={<Layout><WorkPage /></Layout>}></Route>
+          <Route 
+          path="/contact" 
+          element={<Layout><ContactPage /></Layout>}></Route>
+          <Route 
+          path="/portfolio" 
+          element={<Layout><PortfolioPage /></Layout>}></Route>
+          <Route 
+          path="/education" 
+          element={<Layout><EducationPage /></Layout>}></Route>
+          <Route 
+          path="/library" 
+          element={<Layout children={<LibraryPage />}></Layout>}></Route>
+          <Route 
+          path="/clients" 
+          element={<Layout><ClientsPage /></Layout>}></Route>
+          <Route 
+          path="*" 
+          element={<ErrorPage />}></Route>
         </Routes>
     </div>
   );

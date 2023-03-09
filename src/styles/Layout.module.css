@@ -1,0 +1,11 @@
+.container {
+  display: grid;
+  grid-template-columns: 0px auto;
+}
+
+/* On screens that are 572px high or less */
+@media screen and (max-height: 572px) {
+  .sidemenu {
+    grid-column: 2/3;
+  }
+}
