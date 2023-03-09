@@ -79,10 +79,14 @@
 }
 
 /* On screens that are 992px wide or less */
-@media screen and (max-height: 992px) {
+@media screen and (max-width: 992px) {
   .sideMenu {
     width: 70px;
-    padding: 7px;
+    padding: 6px;
+  }
+
+  .menu:hover .menuLabels {
+    transform: translateX(140px);
   }
 }
 
@@ -105,38 +109,51 @@
 
 /* On screens that are 572px high or less */
 @media screen and (max-height: 572px) {
-    .menuContainer{
-        width: 100vw;
-    }
+  .menuContainer {
+    width: 100vw;
+  }
 
-    .sideMenu {
-        top: 0;
-        bottom: 0;
-        left: 15vw;
-        width: 70vw;
-        height: 80px;
-        padding: 10px;
-        display: flex;
-        flex-direction: row;
-      }
+  .sideMenu {
+    top: 0;
+    left: 15vw;
+    width: 70vw;
+    height: 80px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+  }
 
-      .menu {
-        width: 10%;
-        height: 90%;
-      }
+  .menu {
+    width: 10%;
+    height: 90%;
+  }
+
+  .menuLabels {
+    width: 170px;
+    height: 60px;
+    opacity: 0;
+    transform: translateY(70px);
+  }
+
+  .menu:hover .menuLabels {
+    width: 170px;
+    height: 60px;
+    opacity: 1;
+    transform: translateY(90px);
+  }
 }
 
 /* On screens that are 992px wide  and 572 high or less */
-@media screen and (max-width: 992px) and (max-height: 572px){
-    .sideMenu {
-      height: 70px;
-      padding: 7px;
-    }
+@media screen and (max-width: 992px) and (max-height: 572px) {
+  .sideMenu {
+    height: 70px;
+    padding: 7px;
   }
+}
 
-  /* On screens that are 772px high and 572 high or less */
-@media screen and (max-width: 772px) and (max-height: 572px){
-    .sideMenu {
-      display: none;
-    }
+/* On screens that are 772px high and 572 high or less */
+@media screen and (max-width: 772px) and (max-height: 572px) {
+  .sideMenu {
+    display: none;
   }
+}
