@@ -1,10 +1,12 @@
-import React from 'react'
-import styles from "../styles/Work.module.css";
+import React from "react";
+
+import HeaderText from "../components/HeaderText";
+import styles from "../styles/pages/Work.module.css";
 
 export default function WorkPage() {
   return (
     <div className={styles.container}>
-      <h1 className={styles.headerText}>Work Experience</h1>
+      <HeaderText dataText="Work Experience"/>
     </div>
-  )
+  );
 }

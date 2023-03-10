@@ -1,10 +1,12 @@
-import React from 'react'
-import styles from "../styles/Education.module.css";
+import React from "react";
+
+import HeaderText from "../components/HeaderText";
+import styles from "../styles/pages/Education.module.css";
 
 export default function EducationPage() {
   return (
     <div className={styles.container}>
-      <h1 className={styles.headerText}>Education Timeline</h1>
+      <HeaderText dataText="Education Timeline"/>
     </div>
-  )
+  );
 }

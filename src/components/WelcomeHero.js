@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../styles/WelcomeHero.module.css";
+import styles from "../styles/components/WelcomeHero.module.css";
 import hero from "../assets/images/hero.png";
 
 export default function WelcomeHero() {

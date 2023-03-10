@@ -1,10 +1,12 @@
-import React from 'react'
-import styles from "../styles/Client.module.css";
+import React from "react";
+
+import HeaderText from "../components/HeaderText";
+import styles from "../styles/pages/Client.module.css";
 
 export default function ClientsPage() {
   return (
     <div className={styles.container}>
-      <h1 className={styles.headerText}>Clients</h1>
+      <HeaderText dataText="Clients"/>
     </div>
-  )
+  );
 }

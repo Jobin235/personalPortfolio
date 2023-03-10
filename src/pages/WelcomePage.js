@@ -1,7 +1,7 @@
 import React from "react";
 import Typed from "react-typed";
 import WelcomeHero from "../components/WelcomeHero";
-import styles from "../styles/WelcomePage.module.css";
+import styles from "../styles/pages/WelcomePage.module.css";
 
 export default function WelcomePage(props) {
   return (

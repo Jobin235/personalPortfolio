@@ -3,7 +3,7 @@ import React from "react";
 import Typed from "react-typed";
 import WheelMenu from "../components/WheelMenu";
 import WelcomePage from "../pages/WelcomePage";
-import styles from "../styles/HomePage.module.css";
+import styles from "../styles/pages/HomePage.module.css";
 import backgroundImage from '../assets/images/background.jpg'
 
 export default function HomePage(props) {

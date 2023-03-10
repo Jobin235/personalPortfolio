@@ -1,10 +1,12 @@
-import React from 'react'
-import styles from "../styles/Portfolio.module.css";
+import React from "react";
+
+import HeaderText from "../components/HeaderText";
+import styles from "../styles/pages/Portfolio.module.css";
 
 export default function PortfolioPage() {
   return (
     <div className={styles.container}>
-      <h1 className={styles.headerText}>Portfolio</h1>
+      <HeaderText dataText="Portfolio"/>
     </div>
-  )
+  );
 }

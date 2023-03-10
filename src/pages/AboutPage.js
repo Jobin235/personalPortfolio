@@ -1,10 +1,12 @@
 import React from "react";
-import styles from "../styles/AboutPage.module.css";
+
+import HeaderText from "../components/HeaderText";
+import styles from "../styles/pages/AboutPage.module.css";
 
 export default function AboutPage() {
   return (
-      <div className={styles.container}>
-        <h1 className={styles.headerText}>About</h1>
-      </div>
+    <div className={styles.container}>
+      <HeaderText dataText="About"/>
+    </div>
   );
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../styles/SideMenu.module.css";
+import styles from "../styles/components/SideMenu.module.css";
 
 import about from "../assets/images/about.png";
 import education from "../assets/images/education.png";

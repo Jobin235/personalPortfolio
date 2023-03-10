@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-import styles from "../styles/WheelMenu.module.css";
+import styles from "../styles/components/WheelMenu.module.css";
 
 import about from "../assets/images/about.png";
 import education from "../assets/images/education.png";

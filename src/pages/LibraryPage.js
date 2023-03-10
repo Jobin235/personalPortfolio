@@ -1,10 +1,12 @@
-import React from 'react'
-import styles from "../styles/Library.module.css";
+import React from "react";
+
+import HeaderText from "../components/HeaderText";
+import styles from "../styles/pages/Library.module.css";
 
 export default function LibraryPage() {
   return (
     <div className={styles.container}>
-      <h1 className={styles.headerText}>Libraries Used</h1>
+      <HeaderText dataText="Libraries Used"/>
     </div>
-  )
+  );
 }

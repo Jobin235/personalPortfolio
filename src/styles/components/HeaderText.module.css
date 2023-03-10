@@ -1,24 +1,50 @@
-.container {
-  background: rgb(39, 39, 39);
-  min-height: 200vh;
-  display: grid;
-  grid-template-columns: 80px auto 80px;
-}
-
 .headerText {
-  grid-column: 1/4;
   text-align: center;
   padding: 6vh 10px 3vh 10px;
   margin: 0;
   font-size: 3rem;
   font-weight: 900;
   text-transform: uppercase;
+  z-index: 10;
+}
+
+.headerText::before {
+  width: 100%;
+  content: attr(dataText);
+  color: rgb(117, 116, 116);
+  font-size: 5rem;
+  z-index: 0;
+  left: 50%;
+  top: 4vh;
+  opacity: 0.2;
+  transform: translateX(-50%);
+  position: absolute;
+}
+
+/* On screens that are 992px wide or less*/
+@media screen and (max-width: 992px) {
+  .headerText::before{
+    font-size: 4rem;
+    top: 5vh;
+  }
 }
 
 /* On screens that are 772px wide or less*/
 @media screen and (max-width: 772px) {
   .headerText {
     font-size: 2rem;
+  }
+
+  .headerText::before{
+    font-size: 3rem;
+    top: 5vh;
+  }
+}
+
+/* On screens that are 572px wide or less */
+@media screen and (max-width: 572px) {
+  .headerText::before{
+    display: none;
   }
 }
 

@@ -1,10 +1,12 @@
-import React from 'react'
-import styles from "../styles/Skills.module.css";
+import React from "react";
+
+import HeaderText from "../components/HeaderText";
+import styles from "../styles/pages/Skills.module.css";
 
 export default function SkillsPage() {
   return (
     <div className={styles.container}>
-      <h1 className={styles.headerText}>Skills</h1>
+      <HeaderText dataText="Skills"/>
     </div>
-  )
+  );
 }
