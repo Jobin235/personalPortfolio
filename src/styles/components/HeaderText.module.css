@@ -67,11 +67,21 @@
   .headerText {
     padding-top: calc(2vh + 100px);
   }
+
+  .headerText::before{
+    font-size: 4rem;
+    top: calc(2vh + 90px);
+  }
 }
 
 /* On screens that are 572px high and 772px wide or less */
 @media screen and (max-width: 772px) and (max-height: 572px) {
   .headerText {
     padding-top: 6vh;
+  }
+
+  .headerText::before{
+    font-size: 3rem;
+    top: 4vh;
   }
 }

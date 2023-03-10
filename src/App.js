@@ -21,47 +21,53 @@ function App() {
 
   return (
     <div className="App">
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <HomePage
-                initialRender={initialRender}
-                setInitialRender={setInitialRender}
-                currentMenu={currentMenu}
-                setCurrentMenu={setCurrentMenu}
-              />
-            }
-            exact
-          ></Route>
-          <Route 
-          path="/about" 
-          element={<Layout children={<AboutPage />}></Layout>}></Route>
-          <Route 
-          path="/skills" 
-          element={<Layout><SkillsPage /></Layout>}></Route>
-          <Route 
-          path="/work" 
-          element={<Layout><WorkPage /></Layout>}></Route>
-          <Route 
-          path="/contact" 
-          element={<Layout><ContactPage /></Layout>}></Route>
-          <Route 
-          path="/portfolio" 
-          element={<Layout><PortfolioPage /></Layout>}></Route>
-          <Route 
-          path="/education" 
-          element={<Layout><EducationPage /></Layout>}></Route>
-          <Route 
-          path="/library" 
-          element={<Layout children={<LibraryPage />}></Layout>}></Route>
-          <Route 
-          path="/clients" 
-          element={<Layout><ClientsPage /></Layout>}></Route>
-          <Route 
-          path="*" 
-          element={<ErrorPage />}></Route>
-        </Routes>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <HomePage
+              initialRender={initialRender}
+              setInitialRender={setInitialRender}
+              currentMenu={currentMenu}
+              setCurrentMenu={setCurrentMenu}
+            />
+          }
+          exact
+        ></Route>
+        <Route
+          path="/about"
+          element={<Layout children={<AboutPage />}></Layout>}
+        ></Route>
+        <Route
+          path="/skills"
+          element={<Layout children={<SkillsPage />}></Layout>}
+        ></Route>
+        <Route
+          path="/work"
+          element={<Layout children={<WorkPage />}></Layout>}
+        ></Route>
+        <Route
+          path="/contact"
+          element={<Layout children={<ContactPage />}></Layout>}
+        ></Route>
+        <Route
+          path="/portfolio"
+          element={<Layout children={<PortfolioPage />}></Layout>}
+        ></Route>
+        <Route
+          path="/education"
+          element={<Layout children={<EducationPage />}></Layout>}
+        ></Route>
+        <Route
+          path="/library"
+          element={<Layout children={<LibraryPage />}></Layout>}
+        ></Route>
+        <Route
+          path="/clients"
+          element={<Layout children={<ClientsPage />}></Layout>}
+        ></Route>
+        <Route path="*" element={<ErrorPage />}></Route>
+      </Routes>
     </div>
   );
 }
