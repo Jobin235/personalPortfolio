@@ -1,9 +1,31 @@
-import React from 'react'
+import React from "react";
 import styles from "../styles/components/HeaderText.module.css";
+import { motion } from "framer-motion";
 export default function HeaderText(props) {
+  const slideInText = {
+    initial: { y: "-100vh" },
+    animate: {
+      y: 0,
+      transition: {
+        duration: 0.5,
+        type: "spring",
+        damping: 20,
+        stiffness: 250,
+      },
+    },
+    exit: { x: window.innerWidth },
+  };
+
   return (
-    <h1 className={styles.headerText} dataText={props.datatext}>
-        {props.datatext}
-      </h1>
-  )
+    <motion.h1
+      className={styles.headerText}
+      dataText={props.datatext}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      variants={slideInText}
+    >
+      {props.datatext}
+    </motion.h1>
+  );
 }

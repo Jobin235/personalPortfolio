@@ -3,6 +3,17 @@
   grid-template-columns: 0px auto;
 }
 
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgb(255, 255, 255, 0.3);
+  box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+}
+
 /* On screens that are 572px high or less */
 @media screen and (max-height: 572px) {
   .sidemenu {

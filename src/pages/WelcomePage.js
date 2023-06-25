@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import Typed from "react-typed";
 import WelcomeHero from "../components/WelcomeHero";
 import styles from "../styles/pages/WelcomePage.module.css";
 
-export default function WelcomePage(props) {
+import { AppContext } from "../utils/context";
+
+export default function WelcomePage() {
+
+  const { setInitialRender} = useContext(AppContext)
+
   return (
     <div className={styles.container}>
       <div className={styles.heroContainer}>
@@ -19,7 +24,7 @@ export default function WelcomePage(props) {
       <div className={styles.buttonContainer}>
         <button
           className={styles.button}
-          onClick={() => props.setInitialRender(false)}
+          onClick={() => setInitialRender(false)}
         >
           Enter
         </button>

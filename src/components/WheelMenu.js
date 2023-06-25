@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import { AppContext } from "../utils/context";
 
 import styles from "../styles/components/WheelMenu.module.css";
 
@@ -15,14 +16,15 @@ import library from "../assets/images/library.png";
 import gunClick from "../assets/audio/gunClick.mp3";
 const audio = new Audio(gunClick);
 
-export default function WheelMenu(props) {
+export default function WheelMenu() {
   const [hoveredMenu, setHoveredMenu] = useState("SELECT AN OPTION");
   const [redirect, setRedirect] = useState(false);
+  const { currentMenu, setCurrentMenu } = useContext(AppContext)
 
   useEffect(() => {
-    let path = "/" + props.currentMenu;
+    let path = "/" + currentMenu;
     if (redirect) {
-      navigate(path, {currentMenu:props.currentMenu, setCurrentMenu: props.setCurrentMenu});
+      navigate(path);
     }
     // eslint-disable-next-line
   }, [redirect]);
@@ -41,7 +43,7 @@ export default function WheelMenu(props) {
   const navigate = useNavigate();
 
   const handleMenuSelection = (menu) => {
-    props.setCurrentMenu(menu);
+    setCurrentMenu(menu);
     setRedirect(true);
   };
 
@@ -65,7 +67,7 @@ export default function WheelMenu(props) {
           onMouseEnter={() => handleMouseEnter("SKILLS")}
           onMouseLeave={handleMouseLeave}
           data-menu="Skills"
-          className={props.currentMenu === "Skills" ? styles.activeMenu : ""}
+          className={currentMenu === "Skills" ? styles.activeMenu : ""}
         >
           <path
             d="M 610 310 A 300 300 0 0 1 522.1320343559643 522.1320343559643  L 451.4213562373095 451.4213562373095 A 200 200 0 0 0 510 310  z"
@@ -80,7 +82,7 @@ export default function WheelMenu(props) {
           onMouseEnter={() => handleMouseEnter("ABOUT")}
           onMouseLeave={handleMouseLeave}
           data-menu="About"
-          className={props.currentMenu === "About" ? styles.activeMenu : ""}
+          className={currentMenu === "About" ? styles.activeMenu : ""}
         >
           <path
             d="M 522.1320343559643 522.1320343559643 A 300 300 0 0 1 310 610  L 310 510 A 200 200 0 0 0 451.4213562373095 451.4213562373095  z"
@@ -95,7 +97,7 @@ export default function WheelMenu(props) {
           onMouseEnter={() => handleMouseEnter("WORK EXPERIENCE")}
           onMouseLeave={handleMouseLeave}
           data-menu="Work Experience"
-          className={props.currentMenu === "Work" ? styles.activeMenu : ""}
+          className={currentMenu === "Work" ? styles.activeMenu : ""}
         >
           <path
             d="M 310 610 A 300 300 0 0 1 97.86796564403576 522.1320343559643  L 168.57864376269052 451.4213562373095 A 200 200 0 0 0 310 510  z"
@@ -110,7 +112,7 @@ export default function WheelMenu(props) {
           onMouseEnter={() => handleMouseEnter("PORTFOLIO")}
           onMouseLeave={handleMouseLeave}
           data-menu="Portfolio"
-          className={props.currentMenu === "Portfolio" ? styles.activeMenu : ""}
+          className={currentMenu === "Portfolio" ? styles.activeMenu : ""}
         >
           <path
             d="M 97.86796564403576 522.1320343559643 A 300 300 0 0 1 10 310.00000000000006  L 110 310 A 200 200 0 0 0 168.57864376269052 451.4213562373095  z"
@@ -125,7 +127,7 @@ export default function WheelMenu(props) {
           onMouseEnter={() => handleMouseEnter("EDUCATION TIMELINE")}
           onMouseLeave={handleMouseLeave}
           data-menu="Education Timeline"
-          className={props.currentMenu === "Education" ? styles.activeMenu : ""}
+          className={currentMenu === "Education" ? styles.activeMenu : ""}
         >
           <path
             d="M 10 310.00000000000006 A 300 300 0 0 1 97.8679656440357 97.86796564403576  L 168.57864376269046 168.57864376269052 A 200 200 0 0 0 110 310  z"
@@ -140,7 +142,7 @@ export default function WheelMenu(props) {
           onMouseEnter={() => handleMouseEnter("CLIENTS")}
           onMouseLeave={handleMouseLeave}
           data-menu="Clients"
-          className={props.currentMenu === "Clients" ? styles.activeMenu : ""}
+          className={currentMenu === "Clients" ? styles.activeMenu : ""}
         >
           <path
             d="M 97.8679656440357 97.86796564403576 A 300 300 0 0 1 309.99999999999994 10  L 309.99999999999994 110 A 200 200 0 0 0 168.57864376269046 168.57864376269052  z"
@@ -155,7 +157,7 @@ export default function WheelMenu(props) {
           onMouseEnter={() => handleMouseEnter("LIBRARIES USED")}
           onMouseLeave={handleMouseLeave}
           data-menu="Libraries Used"
-          className={props.currentMenu === "Library" ? styles.activeMenu : ""}
+          className={currentMenu === "Library" ? styles.activeMenu : ""}
         >
           <path
             d="M 309.99999999999994 10 A 300 300 0 0 1 522.1320343559642 97.8679656440357  L 451.4213562373095 168.57864376269046 A 200 200 0 0 0 309.99999999999994 110  z"
@@ -170,7 +172,7 @@ export default function WheelMenu(props) {
           onMouseEnter={() => handleMouseEnter("CONTACT")}
           onMouseLeave={handleMouseLeave}
           data-menu="Contact"
-          className={props.currentMenu === "Contact" ? styles.activeMenu : ""}
+          className={currentMenu === "Contact" ? styles.activeMenu : ""}
         >
           <path
             d="M 522.1320343559642 97.8679656440357 A 300 300 0 0 1 610 309.99999999999994  L 510 309.99999999999994 A 200 200 0 0 0 451.4213562373095 168.57864376269046  z"

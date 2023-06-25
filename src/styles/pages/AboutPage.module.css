@@ -11,7 +11,7 @@
 .card {
   grid-column: 2/4;
   background-color: #18181b;
-  margin: 0px 50px 0px 20px;
+  margin: 0px 50px 20px 20px;
   border-radius: 15px;
   box-shadow: 2px 2px #595959;
 }
@@ -25,20 +25,41 @@
   padding: 40px;
 }
 
+.name {
+  font-size: 3.75rem;
+  filter: drop-shadow(2px 4px 6px black);
+}
+
+.designation {
+  font-size: 3.75rem;
+  filter: drop-shadow(2px 4px 6px black);
+  background: -webkit-linear-gradient(90deg,#00c461, #c2fa39);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.detail {
+  font-size: 20px;
+  text-align: justify;
+}
+
 .image {
+  height: 100%;
   position: relative;
   background-image: radial-gradient(#cccccc 40%, #6e6e6e);
   border-radius: 0px 15px 15px 0px;
   overflow: hidden;
   box-shadow: -2px 0px 2px #595959;
-  animation: animateBg 0.8s ease-in normal;
+  animation: animateBg 1.4s ease-in normal;
 }
 
 .heroImage {
   width: 100%;
-  object-fit: contain;
+  height: 100%;
+  object-fit: cover;
   filter: grayscale(1);
-  animation: scaleImage 0.8s ease-in normal;
+  animation: scaleImage 1.4s ease-in normal;
 }
 
 .nameCard {
@@ -55,16 +76,17 @@
   padding: 15px;
   border-radius: 15px 15px 0px 0px;
   box-shadow: 0px -2px 4px #595959;
-  animation: animateNameCard 0.8s ease-in normal;
+  animation: animateNameCard 1.4s ease-in normal;
 }
 
 @keyframes scaleImage {
   0% {
     transform: scale(1.8);
-    opacity: 0.5;
+    opacity: 0;
   }
   50% {
     transform: scale(0.98);
+    opacity: 0.5;
   }
   100% {
     transform: scale(1);

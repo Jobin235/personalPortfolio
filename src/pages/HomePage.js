@@ -1,15 +1,28 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
+import { AppContext } from "../utils/context";
 
 import Typed from "react-typed";
 import WheelMenu from "../components/WheelMenu";
 import WelcomePage from "../pages/WelcomePage";
 import styles from "../styles/pages/HomePage.module.css";
-import backgroundImage from '../assets/images/background.jpg'
+import hexagonImage from "../assets/images/hexagon.jpg";
 
-export default function HomePage(props) {
+import { motion } from "framer-motion";
+
+export default function HomePage() {
+  const { initialRender, setSideMenuRender } = useContext(AppContext);
+
+  useEffect(
+    () => {
+      setSideMenuRender(false);
+    },
+    // eslint-disable-next-line
+    []
+  );
+
   return (
     <>
-      {props.initialRender ? (
+      {initialRender ? (
         <div
           style={{
             display: "flex",
@@ -21,18 +34,21 @@ export default function HomePage(props) {
             minHeight: "100vh",
           }}
         >
-          <WelcomePage setInitialRender={props.setInitialRender} />
+          <WelcomePage />
         </div>
       ) : (
-        <div
+        <motion.div
           style={{
             display: "grid",
             minHeight: "100vh",
-            background: `url(${backgroundImage}) no-repeat center center`,
+            background: `url(${hexagonImage}) no-repeat center center`,
             backgroundColor: "rgb(32 33 30)",
             backgroundBlendMode: "luminosity",
             backgroundSize: "cover",
           }}
+          initial={{ opacity: 0, scale: 0.7 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, ease: "easeInOut" }}
         >
           <div
             style={{
@@ -59,12 +75,9 @@ export default function HomePage(props) {
           </div>
 
           <div className={styles.wheelSvg}>
-            <WheelMenu
-              currentMenu={props.currentMenu}
-              setCurrentMenu={props.setCurrentMenu}
-            ></WheelMenu>
+            <WheelMenu></WheelMenu>
           </div>
-        </div>
+        </motion.div>
       )}
     </>
   );
