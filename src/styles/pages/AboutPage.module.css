@@ -28,9 +28,11 @@
 .name {
   font-size: 3.75rem;
   filter: drop-shadow(2px 4px 6px black);
+  margin: 2rem 0;
 }
 
 .designation {
+  margin: 2rem 0;
   font-size: 3.75rem;
   filter: drop-shadow(2px 4px 6px black);
   background: -webkit-linear-gradient(90deg,#00c461, #c2fa39);
@@ -40,7 +42,7 @@
 }
 
 .detail {
-  font-size: 20px;
+  font-size: 1.25rem;
   text-align: justify;
 }
 
@@ -79,6 +81,73 @@
   animation: animateNameCard 1.4s ease-in normal;
 }
 
+.statusContainer{
+  display: flex;
+  justify-content: space-around;
+  border-radius: 15px 15px;
+  background-color: #262629;
+  box-shadow: 1px 1px #595959;
+  padding: 1rem;
+  margin: 2.5rem 0rem;
+}
+
+.status{
+  display: flex;
+}
+
+.text{
+  padding-left: 1rem;
+  font-size: 1.25rem;
+  align-self: baseline;
+}
+
+.experience{
+  color: rgb(59 130 246);
+  font-weight: bold;
+  font-size: 3.5rem;
+  align-self: center;
+}
+
+.project{
+  color: rgb(34 197 94);
+  font-weight: bold;
+  font-size: 3.5rem;
+  align-self: center;
+}
+
+.clients{
+  color: rgb(202 254 0);
+  font-weight: bold;
+  font-size: 3.5rem;
+  align-self: center;
+}
+
+.buttonContainer {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.button {
+  color: black;
+  background-color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  width: 250px;
+  height: 70px;
+  border: none;
+  border-radius: 5px;
+  transform: translate(-10px, -10px);
+  box-shadow: 10px 10px #29c64a;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.button:hover {
+  box-shadow: 0px 0px #29c64a;
+  transform: translate(0px, 0px);
+  transition: all 0.2s ease-in-out;
+}
+
 @keyframes scaleImage {
   0% {
     transform: scale(1.8);
@@ -111,5 +180,63 @@
   }
   100% {
     opacity: 1;
+  }
+}
+
+/* On screens that are 1390px wide or less */
+@media screen and (max-width: 800px) {
+  .statusContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .name {
+    font-size: 2.5rem;
+  }
+  .designation {
+    font-size: 2.5rem;
+  }
+  .detail{
+    font-size: 1;
+  }
+  .text{
+    font-size: 1;
+  }
+  .experience{
+    font-size: 2.5rem;
+  }
+  
+  .project{
+    font-size: 2.5rem;
+  }
+  
+  .clients{
+    font-size: 2.5rem;
+  }
+}
+
+/* On screens that are 1390px wide or less */
+@media screen and (min-width: 1200px) and (max-width: 1600px) {
+  .heroImage{
+    object-position: top 0% left 0px;
+  }
+}
+
+/* On screens that are 1390px wide or less */
+@media screen and (max-width: 1200px) {
+  .cardContent {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .details {
+    order: 2;
+  }
+  .image {
+    order: 1;
+    height: 525px;
+    border-radius: 15px 15px 0px 0px;
+  }
+  .heroImage{
+    object-position: top 20% left 40px;
   }
 }

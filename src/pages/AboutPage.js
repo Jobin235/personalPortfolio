@@ -16,11 +16,11 @@ export default function AboutPage() {
             <div className={styles.cardContent}>
               <div className={styles.details}>
                 <h1 className={styles.name}>
-                  <span style={{ color: "grey" }}>{">"}</span> JOBIN JOY
+                  <span style={{ color: "grey" }}>{">"}</span> JOBIN JOY,
                 </h1>
 
                 <h1 className={styles.designation}>
-                  Creative Full stack Developer
+                  Creative Full-Stack Developer
                 </h1>
 
                 <p className={styles.detail}>
@@ -33,27 +33,26 @@ export default function AboutPage() {
 
                 <p className={styles.detail}>
                   My repertoire includes Javascript and tools such as ReactJS,
-                  NextJS, Express, NodeJS, MongoDB, Redis and more.
+                  NextJS, Express, NodeJS, MongoDB and more.
                 </p>
 
                 <div className={styles.statusContainer}>
                   <div className={styles.status}>
-                    <p className={styles.text}>
-                      <span className={styles.number}>4</span>Years of
-                      experience
-                    </p>
+                    <span className={styles.experience}>4+ </span>
+                    <p className={styles.text}>Years of experience</p>
                   </div>
                   <div className={styles.status}>
-                    <p className={styles.text}>
-                      <span className={styles.number}>14+</span>Projects
-                      Completed
-                    </p>
+                    <span className={styles.project}>14+ </span>
+                    <p className={styles.text}>Projects Completed</p>
                   </div>
                   <div className={styles.status}>
-                    <p className={styles.text}>
-                      <span className={styles.number}>5</span>Happy Clients{" "}
-                    </p>
+                    <div className={styles.clients}>5 </div>
+                    <p className={styles.text}>Happy Clients</p>
                   </div>
+                </div>
+
+                <div className={styles.buttonContainer}>
+                  <button className={styles.button}>Download Resume</button>
                 </div>
               </div>
 

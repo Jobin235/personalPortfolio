@@ -12,7 +12,7 @@ export default function PageTransition({ children }) {
     },
     exit: {
       scale: [1, 0.8, 0.8],
-      y: [0, 0, -window.innerHeight],
+      y: [0, 0, -document.body.scrollHeight],
       transition: {
         duration: 0.6,
         ease: "easeInOut",
