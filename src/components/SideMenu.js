@@ -13,6 +13,7 @@ import portfolio from "../assets/images/portfolio.png";
 import client from "../assets/images/client.png";
 import work from "../assets/images/work.png";
 import library from "../assets/images/library.png";
+import back from "../assets/images/back.png";
 
 import { motion } from "framer-motion";
 
@@ -58,6 +59,13 @@ export default function SideMenu() {
       variants={!sideMenuRender ? slideInMenu : ""}
     >
       <div className={styles.sideMenu}>
+      <div
+          className={styles.menu}
+          onClick={() => navigate('/')}
+        >
+          <img src={back} className={styles.menuImage} alt="back" />
+          <div className={styles.menuLabels}>Menu</div>
+        </div>
         <div
           id={currentMenu === "About" ? styles.active : ""}
           className={styles.menu}

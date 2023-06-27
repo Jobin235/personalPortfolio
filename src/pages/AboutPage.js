@@ -17,7 +17,6 @@ export default function AboutPage() {
               <div className={styles.details}>
                 <h1 className={styles.name}>
                   <span style={{ color: "grey" }}>{">"}</span> JOBIN JOY
-                  <span>{"_"}</span>
                 </h1>
 
                 <h1 className={styles.designation}>

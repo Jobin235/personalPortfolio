@@ -21,7 +21,7 @@
 
 .menu {
   width: 90%;
-  height: 10%;
+  height: 9%;
   background-color: #262629;
   padding: 2px;
   border-radius: 15px;
@@ -124,7 +124,7 @@
   }
 
   .menu {
-    width: 10%;
+    width: 9%;
     height: 90%;
   }
 
