@@ -35,7 +35,7 @@
   margin: 2rem 0;
   font-size: 3.75rem;
   filter: drop-shadow(2px 4px 6px black);
-  background: -webkit-linear-gradient(90deg,#00c461, #c2fa39);
+  background: -webkit-linear-gradient(90deg, #00c461, #c2fa39);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -81,7 +81,7 @@
   animation: animateNameCard 1.4s ease-in normal;
 }
 
-.statusContainer{
+.statusContainer {
   display: flex;
   justify-content: space-around;
   border-radius: 15px 15px;
@@ -91,31 +91,31 @@
   margin: 2.5rem 0rem;
 }
 
-.status{
+.status {
   display: flex;
 }
 
-.text{
+.text {
   padding-left: 1rem;
   font-size: 1.25rem;
   align-self: baseline;
 }
 
-.experience{
+.experience {
   color: rgb(59 130 246);
   font-weight: bold;
   font-size: 3.5rem;
   align-self: center;
 }
 
-.project{
+.project {
   color: rgb(34 197 94);
   font-weight: bold;
   font-size: 3.5rem;
   align-self: center;
 }
 
-.clients{
+.clients {
   color: rgb(202 254 0);
   font-weight: bold;
   font-size: 3.5rem;
@@ -183,9 +183,16 @@
   }
 }
 
-/* On screens that are 1390px wide or less */
+/* On screens that are 772px wide or less */
+@media screen and (max-width: 772px) {
+  .content {
+    display: block;
+  }
+}
+
+/* On screens that are 800px wide or less */
 @media screen and (max-width: 800px) {
-  .statusContainer{
+  .statusContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -196,37 +203,40 @@
   .designation {
     font-size: 2.5rem;
   }
-  .detail{
+  .detail {
     font-size: 1;
   }
-  .text{
+  .text {
     font-size: 1;
   }
-  .experience{
+  .experience {
     font-size: 2.5rem;
   }
-  
-  .project{
+
+  .project {
     font-size: 2.5rem;
   }
-  
-  .clients{
+
+  .clients {
     font-size: 2.5rem;
   }
 }
 
-/* On screens that are 1390px wide or less */
+/* On screens that are 1200px wide or less and 1600px high or less*/
 @media screen and (min-width: 1200px) and (max-width: 1600px) {
-  .heroImage{
+  .heroImage {
     object-position: top 0% left 0px;
   }
 }
 
-/* On screens that are 1390px wide or less */
+/* On screens that are 1200px wide or less */
 @media screen and (max-width: 1200px) {
   .cardContent {
     display: grid;
     grid-template-columns: 1fr;
+  }
+  .card {
+    margin: 0px 10px 20px 10px;
   }
   .details {
     order: 2;
@@ -236,7 +246,7 @@
     height: 525px;
     border-radius: 15px 15px 0px 0px;
   }
-  .heroImage{
+  .heroImage {
     object-position: top 20% left 40px;
   }
 }

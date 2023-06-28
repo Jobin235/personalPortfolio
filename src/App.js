@@ -1,5 +1,5 @@
 import "./App.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 
 import HomePage from "./pages/HomePage";
@@ -23,6 +23,10 @@ function App() {
   const [initialRender, setInitialRender] = useState(true);
   const [sideMenuRender, setSideMenuRender] = useState(false);
   const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
   return (
     <AppContext.Provider

@@ -6,7 +6,7 @@ import styles from "../styles/pages/Work.module.css";
 export default function WorkPage() {
   return (
     <div className={styles.container}>
-      <HeaderText datatext="Work Experience"/>
+      <HeaderText text="Work Experience"/>
     </div>
   );
 }

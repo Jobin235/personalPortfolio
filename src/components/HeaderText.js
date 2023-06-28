@@ -19,13 +19,13 @@ export default function HeaderText(props) {
   return (
     <motion.h1
       className={styles.headerText}
-      dataText={props.datatext}
+      text={props.text}
       initial="initial"
       animate="animate"
       exit="exit"
       variants={slideInText}
     >
-      {props.datatext}
+      {props.text}
     </motion.h1>
   );
 }

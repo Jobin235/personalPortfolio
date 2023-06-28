@@ -6,7 +6,7 @@ import styles from "../styles/pages/Portfolio.module.css";
 export default function PortfolioPage() {
   return (
     <div className={styles.container}>
-      <HeaderText datatext="Portfolio"/>
+      <HeaderText text="Portfolio"/>
     </div>
   );
 }

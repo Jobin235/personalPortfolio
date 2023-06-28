@@ -6,7 +6,7 @@ import styles from "../styles/pages/Client.module.css";
 export default function ClientsPage() {
   return (
     <div className={styles.container}>
-      <HeaderText datatext="Clients"/>
+      <HeaderText text="Clients"/>
     </div>
   );
 }

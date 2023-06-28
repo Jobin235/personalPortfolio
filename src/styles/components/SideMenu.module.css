@@ -78,6 +78,12 @@
   transition: all 0.5s ease-in-out;
 }
 
+/* On screens that are 772px wide or less */
+@media screen and (max-width: 772px) {
+  .menuContainer {
+    display: none;
+  }
+}
 /* On screens that are 992px wide or less */
 @media screen and (max-width: 992px) {
   .sideMenu {
@@ -92,6 +98,7 @@
 
 /* On screens that are 772px high or less */
 @media screen and (max-height: 772px) {
+
   .sideMenu {
     width: 60px;
     padding: 4px;

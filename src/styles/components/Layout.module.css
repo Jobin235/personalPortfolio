@@ -3,6 +3,14 @@
   grid-template-columns: 0px auto;
 }
 
+.sidemenu{
+grid-column: 1/2;
+}
+
+.children{
+  grid-column: 2/3;
+}
+
 ::-webkit-scrollbar {
   -webkit-appearance: none;
   width: 5px;
@@ -15,7 +23,7 @@
 }
 
 /* On screens that are 572px high or less */
-@media screen and (max-height: 572px) {
+@media screen and (max-height: 772px) {
   .sidemenu {
     grid-column: 2/3;
   }

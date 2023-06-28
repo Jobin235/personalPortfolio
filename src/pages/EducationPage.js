@@ -6,7 +6,7 @@ import styles from "../styles/pages/Education.module.css";
 export default function EducationPage() {
   return (
     <div className={styles.container}>
-      <HeaderText datatext="Education Timeline"/>
+      <HeaderText text="Education Timeline"/>
     </div>
   );
 }

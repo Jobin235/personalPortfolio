@@ -6,7 +6,7 @@ import styles from "../styles/pages/Library.module.css";
 export default function LibraryPage() {
   return (
     <div className={styles.container}>
-      <HeaderText datatext="Libraries Used"/>
+      <HeaderText text="Libraries Used"/>
     </div>
   );
 }
