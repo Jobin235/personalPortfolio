@@ -59,6 +59,7 @@ export default function SideMenu() {
         {data.map((data) => {
           return (
             <div
+              key={data.menu}
               id={currentMenu === data.menu ? styles.active : ""}
               className={styles.menu}
               onClick={() => handleMenuSelection(data.menu)}

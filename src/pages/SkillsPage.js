@@ -16,12 +16,12 @@ export default function SkillsPage() {
             <div className={styles.cardContent}>
               {data.map((data) => {
                 return (
-                  <div className={styles.details}>
+                  <div key={data.category} className={styles.details}>
                     <div className={styles.category}>{data.category}</div>
                     <div className={styles.skillSection}>
                       {data.skills.map((skills) => {
                         return (
-                          <Reveal width="100%">
+                          <Reveal key={skills.skill} width="100%">
                             <SkillMeter
                               logo={skills.logo}
                               skill={skills.skill}
