@@ -4,7 +4,14 @@ import HeaderText from "../components/HeaderText";
 import styles from "../styles/pages/Work.module.css";
 
 import PageTransition from "../components/PageTransition";
-import Reveal from "../components/Reveal";
+
+import {
+  VerticalTimeline,
+  VerticalTimelineElement,
+} from "react-vertical-timeline-component";
+import "react-vertical-timeline-component/style.min.css";
+
+import { data } from "../data/experience";
 
 export default function WorkPage() {
   return (
@@ -15,11 +22,36 @@ export default function WorkPage() {
           <div className={styles.card}>
             <div className={styles.cardContent}>
               <div className={styles.details}>
-                <Reveal>
-                  <h1 className={styles.name}>
-                    <span style={{ color: "grey" }}>{">"}</span> JOBIN JOY,
-                  </h1>
-                </Reveal>
+                <VerticalTimeline>
+                  {data.map((data) => {
+                    return (
+                      <VerticalTimelineElement
+                        className="vertical-timeline-element"
+                        contentStyle={{
+                          background: "rgb(38, 38, 41)",
+                          color: "#fff",
+                        }}
+                        contentArrowStyle={{
+                          borderRight: "7px solid  rgb(38, 38, 41)",
+                        }}
+                        date={data.duration}
+                        iconStyle={{
+                          background: "rgb(24, 24, 27)",
+                          color: "#fff",
+                        }}
+                        // icon={<WorkIcon />}
+                      >
+                        <h3 className="vertical-timeline-element-title">
+                          {data.designation}
+                        </h3>
+                        <h4 className="vertical-timeline-element-subtitle">
+                          {data.company}
+                        </h4>
+                        <p>{data.description}</p>
+                      </VerticalTimelineElement>
+                    );
+                  })}
+                </VerticalTimeline>
               </div>
             </div>
           </div>
