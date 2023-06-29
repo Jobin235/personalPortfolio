@@ -38,6 +38,11 @@
   left: 50%;
   transform: translateX(-50%);
   overflow: hidden;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
 .image {
@@ -63,7 +68,7 @@
   margin: 0;
   line-height: 82px;
   filter: drop-shadow(2px 4px 6px black);
-  background: -webkit-linear-gradient(90deg,#00c461, #c2fa39);
+  background: -webkit-linear-gradient(90deg, #00c461, #c2fa39);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -71,7 +76,6 @@
 
 /* On screens that are 992px wide or less, go from four columns to two columns */
 @media screen and (max-width: 992px), (max-height: 772px) {
-
   .heroContainer {
     width: 21rem;
     height: 21rem;
@@ -95,7 +99,7 @@
     height: 20rem;
     overflow: hidden;
   }
-  
+
   .image {
     width: 100%;
     height: 22rem;

@@ -68,6 +68,7 @@ export default function SideMenu() {
                 src={data.image}
                 className={styles.menuImage}
                 alt={data.alt}
+                draggable='false'
               />
               <div className={styles.menuLabels}>{data.label}</div>
             </div>

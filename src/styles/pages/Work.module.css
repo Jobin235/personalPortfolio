@@ -24,3 +24,27 @@
 .details {
   padding: 40px;
 }
+
+#timelineContainer {
+  filter: grayscale(1);
+}
+
+#timelineContainer:hover {
+  filter: grayscale(0);
+}
+
+.date {
+  color: greenyellow !important;
+  font-weight: bold !important;
+}
+
+#designation {
+  background: -webkit-linear-gradient(90deg, #00c461, #c2fa39);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#company {
+  filter: drop-shadow(2px 4px 6px black);
+}

@@ -36,6 +36,11 @@
   width: 70%;
   object-fit: contain;
   filter: grayscale(1) drop-shadow(rgba(0, 0, 0, 0.8) 3px 5px 2px);
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
 #active .menuImage {
@@ -98,7 +103,6 @@
 
 /* On screens that are 772px high or less */
 @media screen and (max-height: 772px) {
-
   .sideMenu {
     width: 60px;
     padding: 4px;

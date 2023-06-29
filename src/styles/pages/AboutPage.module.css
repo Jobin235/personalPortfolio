@@ -62,6 +62,11 @@
   object-fit: cover;
   filter: grayscale(1);
   animation: scaleImage 1.4s ease-in normal;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
 .nameCard {

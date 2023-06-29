@@ -4,6 +4,7 @@ import HeaderText from "../components/HeaderText";
 import styles from "../styles/pages/Work.module.css";
 
 import PageTransition from "../components/PageTransition";
+import Reveal from "../components/Reveal";
 
 import {
   VerticalTimeline,
@@ -26,6 +27,7 @@ export default function WorkPage() {
                   {data.map((data) => {
                     return (
                       <VerticalTimelineElement
+                        id={styles.timelineContainer}
                         className="vertical-timeline-element"
                         contentStyle={{
                           background: "rgb(38, 38, 41)",
@@ -35,19 +37,32 @@ export default function WorkPage() {
                           borderRight: "7px solid  rgb(38, 38, 41)",
                         }}
                         date={data.duration}
+                        dateClassName={styles.date}
                         iconStyle={{
                           background: "rgb(24, 24, 27)",
                           color: "#fff",
                         }}
                         // icon={<WorkIcon />}
                       >
-                        <h3 className="vertical-timeline-element-title">
-                          {data.designation}
-                        </h3>
-                        <h4 className="vertical-timeline-element-subtitle">
-                          {data.company}
-                        </h4>
-                        <p>{data.description}</p>
+                        <Reveal>
+                          <h3
+                            className="vertical-timeline-element-title"
+                            id={styles.designation}
+                          >
+                            {data.designation}
+                          </h3>
+                        </Reveal>
+                        <Reveal>
+                          <h4
+                            className="vertical-timeline-element-subtitle"
+                            id={styles.company}
+                          >
+                            {data.company}
+                          </h4>
+                        </Reveal>
+                        <Reveal>
+                          <p>{data.description}</p>
+                        </Reveal>
                       </VerticalTimelineElement>
                     );
                   })}

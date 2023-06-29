@@ -5,7 +5,7 @@ export default function SkillMeter({ logo, skill, rating }) {
     <div className={styles.container}>
       <div className={styles.skillContainer}>
         <div className={styles.imageContainer}>
-          <img className={styles.image} src={logo} alt={skill} />
+          <img className={styles.image} src={logo} alt={skill} draggable='false'/>
         </div>
         <p className={styles.skill}>{skill}</p>
       </div>

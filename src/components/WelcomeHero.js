@@ -11,7 +11,7 @@ export default function WelcomeHero() {
         </div>
 
         <div className={styles.imageContainer}>
-          <img className={styles.image} src={hero} alt="hero" />
+          <img className={styles.image} src={hero} alt="hero" draggable='false'/>
         </div>
 
         <div className={styles.nameContainer}>
