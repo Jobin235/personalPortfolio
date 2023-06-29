@@ -1,4 +1,35 @@
 .container {
   background: rgb(39, 39, 39);
-  min-height: 200vh;
+  min-height: 100vh;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 100px auto 100px;
+}
+
+.card {
+  grid-column: 2/4;
+  background-color: #18181b;
+  margin: 0px 50px 20px 20px;
+  border-radius: 15px;
+  box-shadow: 2px 2px #595959;
+}
+
+.cardContent {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.details {
+  padding: 40px;
+}
+.category{
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.skillSection{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
