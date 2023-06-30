@@ -1,26 +1,28 @@
 {
   "files": {
-    "main.css": "/personalPortfolio/static/css/main.ac2e2bda.css",
-    "main.js": "/personalPortfolio/static/js/main.83ef9a9f.js",
-    "static/js/787.ced97632.chunk.js": "/personalPortfolio/static/js/787.ced97632.chunk.js",
-    "static/media/hero.png": "/personalPortfolio/static/media/hero.2eb9867940c054af3b79.png",
-    "static/media/background.jpg": "/personalPortfolio/static/media/background.b38423b2d55f4129fcf0.jpg",
-    "static/media/client.png": "/personalPortfolio/static/media/client.3ab1dcd8f313cb9c0123.png",
-    "static/media/education.png": "/personalPortfolio/static/media/education.bf40fb4a452bb48965c8.png",
-    "static/media/skills.png": "/personalPortfolio/static/media/skills.4c83fff9ba04e9a4b9dc.png",
-    "static/media/gunClick.mp3": "/personalPortfolio/static/media/gunClick.0e0fd241310dc8ceae47.mp3",
-    "static/media/library.png": "/personalPortfolio/static/media/library.83f28b65151883d7151c.png",
-    "static/media/contact.png": "/personalPortfolio/static/media/contact.53e91b32292a06d36433.png",
-    "static/media/about.png": "/personalPortfolio/static/media/about.733b33980a2a5693cfc7.png",
-    "static/media/portfolio.png": "/personalPortfolio/static/media/portfolio.a85f3f4338a72e5d30bb.png",
-    "static/media/work.png": "/personalPortfolio/static/media/work.a0fc4a73ece7a0bcd764.png",
-    "index.html": "/personalPortfolio/index.html",
-    "main.ac2e2bda.css.map": "/personalPortfolio/static/css/main.ac2e2bda.css.map",
-    "main.83ef9a9f.js.map": "/personalPortfolio/static/js/main.83ef9a9f.js.map",
-    "787.ced97632.chunk.js.map": "/personalPortfolio/static/js/787.ced97632.chunk.js.map"
+    "main.css": "/static/css/main.9272b8f1.css",
+    "main.js": "/static/js/main.81c98768.js",
+    "static/js/787.ced97632.chunk.js": "/static/js/787.ced97632.chunk.js",
+    "static/media/hero.png": "/static/media/hero.2eb9867940c054af3b79.png",
+    "static/media/hexagon.jpg": "/static/media/hexagon.6805ab3dea3e9b5e2d96.jpg",
+    "static/media/client.png": "/static/media/client.3ab1dcd8f313cb9c0123.png",
+    "static/media/education.png": "/static/media/education.bf40fb4a452bb48965c8.png",
+    "static/media/skills.png": "/static/media/skills.4c83fff9ba04e9a4b9dc.png",
+    "static/media/gunClick.mp3": "/static/media/gunClick.0e0fd241310dc8ceae47.mp3",
+    "static/media/library.png": "/static/media/library.83f28b65151883d7151c.png",
+    "static/media/contact.png": "/static/media/contact.53e91b32292a06d36433.png",
+    "static/media/github.png": "/static/media/github.7acde23236a5c7507398.png",
+    "static/media/about.png": "/static/media/about.733b33980a2a5693cfc7.png",
+    "static/media/portfolio.png": "/static/media/portfolio.a85f3f4338a72e5d30bb.png",
+    "static/media/work.png": "/static/media/work.a0fc4a73ece7a0bcd764.png",
+    "static/media/back.png": "/static/media/back.a1da08e0f959aba790f5.png",
+    "index.html": "/index.html",
+    "main.9272b8f1.css.map": "/static/css/main.9272b8f1.css.map",
+    "main.81c98768.js.map": "/static/js/main.81c98768.js.map",
+    "787.ced97632.chunk.js.map": "/static/js/787.ced97632.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ac2e2bda.css",
-    "static/js/main.83ef9a9f.js"
+    "static/css/main.9272b8f1.css",
+    "static/js/main.81c98768.js"
   ]
 }
