@@ -27,7 +27,6 @@ export default function WorkPage() {
                   {data.map((data) => {
                     return (
                       <VerticalTimelineElement
-                        id={styles.timelineContainer}
                         className="vertical-timeline-element"
                         contentStyle={{
                           background: "rgb(38, 38, 41)",
@@ -55,7 +54,6 @@ export default function WorkPage() {
                         <Reveal>
                           <h4
                             className="vertical-timeline-element-subtitle"
-                            id={styles.company}
                           >
                             {data.company}
                           </h4>
