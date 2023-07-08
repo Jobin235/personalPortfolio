@@ -245,7 +245,7 @@
     font-size: 2.75rem;
   }
 
-  .text{
+  .text {
     font-size: 1rem;
   }
 }
@@ -319,5 +319,19 @@
 @media screen and (max-width: 450px) {
   .details {
     padding: 25px;
+  }
+  .text {
+    font-size: 1.2rem;
+  }
+  .experience {
+    font-size: 2rem;
+  }
+
+  .project {
+    font-size: 2rem;
+  }
+
+  .clients {
+    font-size: 2rem;
   }
 }

@@ -4,6 +4,7 @@ import HeaderText from "../components/HeaderText";
 import styles from "../styles/pages/Education.module.css";
 
 import PageTransition from "../components/PageTransition";
+import Reveal from "../components/Reveal";
 
 import {
   VerticalTimeline,
@@ -35,19 +36,32 @@ export default function EducationPage() {
                           borderRight: "7px solid  rgb(38, 38, 41)",
                         }}
                         date={data.duration}
+                        dateClassName={styles.date}
                         iconStyle={{
                           background: "rgb(24, 24, 27)",
                           color: "#fff",
                         }}
                         // icon={<WorkIcon />}
                       >
-                        <h3 className="vertical-timeline-element-title">
-                          {data.designation}
-                        </h3>
-                        <h4 className="vertical-timeline-element-subtitle">
-                          {data.company}
-                        </h4>
-                        <p>{data.description}</p>
+                        <Reveal>
+                          <h3
+                            className="vertical-timeline-element-title"
+                            id={styles.education}
+                          >
+                            {data.education}
+                          </h3>
+                        </Reveal>
+                        <Reveal>
+                          <h4
+                            id={styles.institute}
+                            className="vertical-timeline-element-subtitle"
+                          >
+                            {data.institute}
+                          </h4>
+                        </Reveal>
+                        <Reveal>
+                          <p id={styles.description}>{data.description}</p>
+                        </Reveal>
                       </VerticalTimelineElement>
                     );
                   })}

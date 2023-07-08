@@ -52,7 +52,10 @@ export default function WorkPage() {
                           </h3>
                         </Reveal>
                         <Reveal>
-                          <h4 id={styles.company} className="vertical-timeline-element-subtitle">
+                          <h4
+                            id={styles.company}
+                            className="vertical-timeline-element-subtitle"
+                          >
                             {data.company}
                           </h4>
                         </Reveal>
