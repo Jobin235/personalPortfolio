@@ -63,6 +63,9 @@
   .content {
     display: block;
   }
+  .card {
+    margin: 0px 10px 20px 10px;
+  }
 }
 
 /* On screens that are 650px wide or less */
@@ -80,5 +83,12 @@
 
   #description{
     font-size: 1rem;
+  }
+}
+
+/* On screens that are 450px wide or less */
+@media screen and (max-width: 450px) {
+  .details {
+    padding: 15px;
   }
 }

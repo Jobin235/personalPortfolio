@@ -72,3 +72,10 @@
     height: 15px;
   }
 }
+
+/* On screens that are 450px wide or less */
+@media screen and (max-width: 450px) {
+  .container {
+    padding: 0 0.5em;
+  }
+}

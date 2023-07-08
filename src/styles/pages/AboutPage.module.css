@@ -314,3 +314,10 @@
     display: block;
   }
 }
+
+/* On screens that are 450px wide or less */
+@media screen and (max-width: 450px) {
+  .details {
+    padding: 25px;
+  }
+}
