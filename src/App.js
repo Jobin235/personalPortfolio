@@ -18,10 +18,32 @@ import { AppContext } from "./utils/context";
 
 import { AnimatePresence } from "framer-motion";
 
+function detectOS() {
+  const platform =
+    window.navigator?.userAgentData?.platform || window.navigator.platform;
+  if (platform.indexOf("Win") !== -1) return "Windows";
+  if (platform.indexOf("Mac") !== -1) return "Mac OS";
+  if (platform.indexOf("Linux") !== -1) return "Linux";
+  if (platform.indexOf("iPhone") !== -1) return "iOS";
+  if (platform.indexOf("Android") !== -1) return "Android";
+  if (platform.indexOf("iPad") !== -1) return "iPad";
+  return "Unknown";
+}
+
 function App() {
   const [currentMenu, setCurrentMenu] = useState("About");
   const [sideMenuRender, setSideMenuRender] = useState(false);
+  const [os, setOs] = useState("");
   const location = useLocation();
+
+  useEffect(() => {
+    const detectOs = detectOS();
+    setOs(detectOs);
+    const metaViewport = document.querySelector('meta[name="viewport"]');
+    os === "Windows"
+      ? metaViewport.setAttribute("content", "width=device-width, initial-scale=0.75")
+      : metaViewport.setAttribute("content", "width=device-width, initial-scale=1");
+  }, [os]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
