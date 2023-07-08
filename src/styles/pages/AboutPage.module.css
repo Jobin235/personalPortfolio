@@ -28,12 +28,12 @@
 .name {
   font-size: 3.4rem;
   filter: drop-shadow(2px 4px 6px black);
-  margin: 2rem 0;
+  margin: 1.5rem 0;
   margin-top: 1rem;
 }
 
 .designation {
-  margin: 2rem 0;
+  margin: 1.5rem 0;
   margin-top: 1rem;
   font-size: 3.4rem;
   filter: drop-shadow(2px 4px 6px black);
@@ -194,10 +194,12 @@
 @media screen and (max-width: 1700px) {
   .name {
     font-size: 3.2rem;
+    margin: 1rem 0rem;
   }
 
   .designation {
     font-size: 3.2rem;
+    margin: 1rem 0rem;
   }
 
   .experience {
