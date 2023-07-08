@@ -14,26 +14,30 @@ export default function SkillsPage() {
         <div className={styles.content}>
           <div className={styles.card}>
             <div className={styles.cardContent}>
-              {data.map((data) => {
-                return (
-                  <div key={data.category} className={styles.details}>
-                    <div className={styles.category}>{data.category}</div>
-                    <div className={styles.skillSection}>
-                      {data.skills.map((skills) => {
-                        return (
-                          <Reveal key={skills.skill} width="100%">
-                            <SkillMeter
-                              logo={skills.logo}
-                              skill={skills.skill}
-                              rating={skills.rating}
-                            />
-                          </Reveal>
-                        );
-                      })}
+              <div className={styles.details}>
+                {data.map((data) => {
+                  return (
+                    <div key={data.category} className={styles.categoryContainer}>
+                      <div className={styles.category}>
+                        {data.category}
+                      </div>
+                      <div className={styles.skillSection}>
+                        {data.skills.map((skills) => {
+                          return (
+                            <Reveal key={skills.skill} width="100%">
+                              <SkillMeter
+                                logo={skills.logo}
+                                skill={skills.skill}
+                                rating={skills.rating}
+                              />
+                            </Reveal>
+                          );
+                        })}
+                      </div>
                     </div>
-                  </div>
-                );
-              })}
+                  );
+                })}
+              </div>
             </div>
           </div>
         </div>

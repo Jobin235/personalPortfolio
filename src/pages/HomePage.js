@@ -31,7 +31,7 @@ export default function HomePage() {
       }}
       initial={{ opacity: 0, scale: 0.7 }}
       animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.8, ease: "easeInOut" }}
+      transition={{ duration: 0.5, ease: "easeInOut" }}
     >
       <div
         style={{
@@ -45,10 +45,11 @@ export default function HomePage() {
         <p className={styles.smallHeadTyped}>
           <Typed
             strings={[
-              "Freelancer",
               "Full-Stack Developer",
-              "React Developer",
-              "Crypto Enthusiast",
+              "Frontend Consultant",
+              "Backend Developer",
+              "Freelancer",
+              "Web3 Enthusiast",
             ]}
             typeSpeed={40}
             backSpeed={50}

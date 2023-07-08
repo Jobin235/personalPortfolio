@@ -22,8 +22,13 @@
 }
 
 .details {
-  padding: 40px;
+  padding: 40px 40px 0 40px;
 }
+
+.categoryContainer{
+  padding-bottom: 40px;
+}
+
 .category{
   font-weight: bold;
   font-size: 1.25rem;
