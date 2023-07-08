@@ -41,9 +41,18 @@ function App() {
     setOs(detectOs);
     const metaViewport = document.querySelector('meta[name="viewport"]');
     os === "Windows"
-      ? metaViewport.setAttribute("content", "width=device-width, initial-scale=0.75")
+      ? metaViewport.setAttribute("content", "width=device-width, initial-scale=" + 1 / window.devicePixelRatio)
       : metaViewport.setAttribute("content", "width=device-width, initial-scale=1");
   }, [os]);
+
+  // useEffect(() => {
+  //   document
+  //     .querySelector("meta[name=viewport]")
+  //     .setAttribute(
+  //       "content",
+  //       "width=device-width, initial-scale=" + 1 / window.devicePixelRatio
+  //     );
+  // }, []);
 
   useEffect(() => {
     window.scrollTo(0, 0);
