@@ -13,13 +13,10 @@ import client from "../assets/images/client.png";
 import work from "../assets/images/work.png";
 import library from "../assets/images/library.png";
 
-import gunClick from "../assets/audio/gunClick.mp3";
-const audio = new Audio(gunClick);
-
 export default function WheelMenu() {
   const [hoveredMenu, setHoveredMenu] = useState("SELECT AN OPTION");
   const [redirect, setRedirect] = useState(false);
-  const { currentMenu, setCurrentMenu } = useContext(AppContext)
+  const { currentMenu, setCurrentMenu } = useContext(AppContext);
 
   useEffect(() => {
     let path = "/" + currentMenu;
@@ -31,13 +28,10 @@ export default function WheelMenu() {
 
   const handleMouseEnter = (menu) => {
     setHoveredMenu(menu);
-    audio.muted = false;
-    audio.play();
   };
 
   const handleMouseLeave = () => {
     setHoveredMenu("SELECT AN OPTION");
-    audio.muted = true;
   };
 
   const navigate = useNavigate();

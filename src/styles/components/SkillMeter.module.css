@@ -53,3 +53,22 @@
   height: 20px;
   filter: drop-shadow(2px 4px 6px black);
 }
+
+/* On screens that are 550px wide or less */
+@media screen and (max-width: 550px) {
+  .imageContainer {
+    width: 40px;
+    height: 40px;
+  }
+  .skill {
+    font-size: 1.25rem;
+  }
+  .blueBox {
+    width: 15px;
+    height: 15px;
+  }
+  .greyBox {
+    width: 15px;
+    height: 15px;
+  }
+}

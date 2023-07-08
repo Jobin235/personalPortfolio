@@ -20,7 +20,6 @@ import { AnimatePresence } from "framer-motion";
 
 function App() {
   const [currentMenu, setCurrentMenu] = useState("About");
-  const [initialRender, setInitialRender] = useState(true);
   const [sideMenuRender, setSideMenuRender] = useState(false);
   const location = useLocation();
 
@@ -33,8 +32,6 @@ function App() {
       value={{
         currentMenu,
         setCurrentMenu,
-        initialRender,
-        setInitialRender,
         sideMenuRender,
         setSideMenuRender,
       }}

@@ -33,3 +33,31 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
+
+/* On screens that are 1700px wide or less */
+@media screen and (max-width: 1700px) {
+  .skillSection{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+/* On screens that are 1350px wide or less */
+@media screen and (max-width: 1350px) {
+  .skillSection{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* On screens that are 990px wide or less */
+@media screen and (max-width: 990px) {
+  .skillSection{
+    grid-template-columns: 1fr;
+  }
+}
+
+/* On screens that are 772px wide or less */
+@media screen and (max-width: 772px) {
+  .content {
+    display: block;
+  }
+}

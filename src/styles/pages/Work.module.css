@@ -26,13 +26,59 @@
 }
 
 .date {
+  font-size: 1.25rem !important;
   color: greenyellow !important;
   font-weight: bold !important;
 }
 
 #designation {
+  font-size: 1.75rem;
   background: -webkit-linear-gradient(90deg, #00c461, #c2fa39);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+#company {
+  font-size: 1.5rem;
+}
+
+#description {
+  font-size: 1.25rem;
+}
+
+/* On screens that are 1500px wide or less */
+@media screen and (max-width: 1500px) {
+  #designation {
+    font-size: 1.5rem;
+  }
+  
+  #company {
+    font-size: 1.25rem;
+  }
+}
+
+/* On screens that are 772px wide or less */
+@media screen and (max-width: 772px) {
+  .content {
+    display: block;
+  }
+}
+
+/* On screens that are 650px wide or less */
+@media screen and (max-width: 650px) {
+  .date{
+    font-size: 1.2rem !important;
+  }
+  #designation {
+    font-size: 1.25rem;
+  }
+  
+  #company {
+    font-size: 1rem;
+  }
+
+  #description{
+    font-size: 1rem;
+  }
 }
