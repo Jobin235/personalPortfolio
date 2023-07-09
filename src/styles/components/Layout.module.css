@@ -28,3 +28,9 @@ grid-column: 1/2;
     grid-column: 2/3;
   }
 }
+/* On windows that zooms to 125% by default */
+@media (-webkit-device-pixel-ratio: 1.25) {
+  .children{
+    zoom: 0.8;
+  }
+}
