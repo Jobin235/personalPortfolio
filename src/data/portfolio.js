@@ -94,7 +94,7 @@ export const data = [
     projectImage: require("../assets/images/appointy_screen.png"),
     description:
       "DeliSpeed is an online booking  platform for various services",
-    status: "Offline - Site Revamped as business model changed",
+    status: "Online",
     tech: ["React"],
     details: [
       {
