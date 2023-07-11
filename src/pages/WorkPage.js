@@ -27,6 +27,7 @@ export default function WorkPage() {
                   {data.map((data) => {
                     return (
                       <VerticalTimelineElement
+                        key="timeline"
                         className="vertical-timeline-element"
                         contentStyle={{
                           background: "rgb(38, 38, 41)",

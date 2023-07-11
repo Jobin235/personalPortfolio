@@ -1,0 +1,173 @@
+.container {
+  display: grid;
+  grid-template-columns: 4fr 6fr;
+  border-radius: 15px 15px;
+  /* background-color: #262629;
+  box-shadow: 1px 1px #595959; */
+  padding: 1rem;
+  margin: 2.5rem 0rem;
+  filter: grayscale(1);
+}
+
+.container:hover .projectImage {
+  transform: scale(1.025);
+  transition: all 0.5s ease-in-out;
+}
+
+.container:hover {
+  filter: grayscale(0);
+  transition: all 0.5s ease-in-out;
+}
+
+.detailsContainer {
+  border-radius: 15px;
+  padding: 1rem 1rem 1rem 3rem;
+  background-color: #262629;
+  box-shadow: 1px 1px #595959;
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  padding: 1rem;
+}
+
+.projectImage {
+  width: 100%;
+  position: relative;
+  object-fit: contain;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logoImage {
+  height: 48px;
+}
+
+.logo {
+  height: 100%;
+  position: relative;
+  object-fit: contain;
+}
+
+.button {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1.25rem;
+  background-color: #18181b;
+  padding: 0.8rem 1rem;
+  border-radius: 15px;
+  box-shadow: 1px 1px #595959;
+  cursor: pointer;
+}
+
+.link {
+  margin: 0;
+}
+
+.button:hover {
+  color: #18181b;
+  background-color: white;
+  border: none;
+  transform: scale(1.1);
+  transition: all 0.2s ease-in-out;
+}
+
+.projectName {
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  display: flex;
+  margin: 1rem 0;
+}
+
+.type {
+  font-size: 1rem;
+  font-weight: normal;
+  border-radius: 1rem;
+  width: fit-content;
+  background-color: rgb(59, 130, 246, 0.1);
+  color: rgb(59 130 246);
+  padding: 0.5rem 1rem;
+  margin-left: 1rem;
+  opacity: 1;
+  display: inline-block;
+  text-align: center;
+}
+
+#freelance {
+  background-color: rgb(34, 197, 94, 0.1);
+  color: rgb(34 197 94);
+}
+
+#company {
+  background-color: rgb(202, 254, 0, 0.1);
+  color: rgb(202 254 0);
+}
+
+/* .container:hover .detailsContainer:not(span) > .projectName {
+  color: rgb(34 197 94);
+  filter: drop-shadow(2px 4px 6px black);
+} */
+
+.description {
+  font-size: 1.25rem;
+  text-align: justify;
+  color: white;
+  margin: 1rem 0;
+}
+
+.heading {
+  color: rgb(59 130 246);
+  font-weight: bold;
+  font-size: 1.25rem;
+  margin: 1rem 0;
+}
+.tagContainer {
+  display: flex;
+  margin: 0.5rem 0;
+}
+
+.tag {
+  filter: drop-shadow(6px 6px 6px black);
+  background-color: rgb(34, 197, 94, 0.1);
+  margin-right: 1rem;
+  border-radius: 15px;
+}
+.tagText {
+  color: rgb(34 197 94);
+  padding: 0rem 1rem;
+  opacity: 1;
+  margin: 1rem 0;
+}
+.subContainers {
+  display: flex;
+}
+
+.details {
+  margin-right: 4rem;
+}
+
+.status {
+  border-radius: 1rem;
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  opacity: 1;
+}
+
+#offline {
+  background-color: rgb(255, 0, 0, 0.1);
+  color: rgb(235, 80, 80);
+}
+
+#online {
+  background-color: rgb(34, 197, 94, 0.1);
+  color: rgb(34 197 94);
+}
