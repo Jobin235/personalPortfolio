@@ -1,6 +1,6 @@
 .headerText {
   text-align: center;
-  padding: 6vh 10px 3vh 10px;
+  padding: 2.6rem 0rem;
   margin: 0;
   font-size: 3rem;
   font-weight: 900;
@@ -15,7 +15,7 @@
   font-size: 5rem;
   z-index: 0;
   left: 50%;
-  top: 2.25rem;
+  top: 1.3rem;
   opacity: 0.2;
   transform: translateX(-50%);
   position: absolute;

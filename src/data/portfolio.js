@@ -122,7 +122,7 @@ export const data = [
         role: "Angular Developer",
       },
     ],
-    link: "https://www.medclick.com/",
-    github:'https://github.com/Jobin235/digisuviapp',
+    link: "https://medclick.netlify.app",
+    github:'https://github.com/Jobin235/medclick',
   },
 ];
