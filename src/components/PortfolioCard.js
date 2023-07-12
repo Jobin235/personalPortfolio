@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import styles from "../styles/components/PortfolioCard.module.css";
 import { Link } from "react-router-dom";
 import Reveal from "./Reveal";
+import github from "../assets/images/github.png";
 
 import { motion, useAnimation, useInView } from "framer-motion";
 
@@ -117,6 +118,7 @@ export const PortfolioCard = ({ data }) => {
             );
           })}
         </div>
+        <div className={styles.gitContainer}>
         <div className={styles.statusContainer}>
           <Reveal>
             <p className={styles.heading}>Current Status</p>
@@ -133,6 +135,22 @@ export const PortfolioCard = ({ data }) => {
               {data.status}
             </p>
           </Reveal>
+        </div>
+
+        {data?.github ? (
+            <Link
+              className={styles.github}
+              to={data.github}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className={styles.gitImage}>
+                <img className={styles.github} src={github} alt='github'/>
+              </div>
+            </Link>
+          ) : (
+            ""
+          )}
         </div>
       </div>
     </div>

@@ -69,6 +69,7 @@ export const data = [
       },
     ],
     link: "https://digisuvidha.netlify.app/",
+    github:'https://github.com/Jobin235/digisuviapp',
   },
   {
     projectName: "Dephyn",
@@ -122,5 +123,6 @@ export const data = [
       },
     ],
     link: "https://www.medclick.com/",
+    github:'https://github.com/Jobin235/digisuviapp',
   },
 ];

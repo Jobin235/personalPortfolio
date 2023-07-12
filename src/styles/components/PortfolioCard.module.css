@@ -155,6 +155,12 @@
   margin-right: 4rem;
 }
 
+.gitContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .status {
   border-radius: 1rem;
   width: fit-content;
@@ -170,4 +176,17 @@
 #online {
   background-color: rgb(34, 197, 94, 0.1);
   color: rgb(34 197 94);
+}
+
+.gitImage{
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.github {
+  height: 100%;
+  position: relative;
+  object-fit: contain;
 }
