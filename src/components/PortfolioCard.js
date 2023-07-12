@@ -1,18 +1,44 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import styles from "../styles/components/PortfolioCard.module.css";
 import { Link } from "react-router-dom";
 import Reveal from "./Reveal";
 
+import { motion, useAnimation, useInView } from "framer-motion";
+
 export const PortfolioCard = ({ data }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, threshold: 0.9 });
+  const animationControl = useAnimation();
+
+  useEffect(
+    () => {
+      if (isInView) {
+        animationControl.start("visible");
+      }
+    },
+    // eslint-disable-next-line
+    [isInView]
+  );
+
   return (
     <div className={styles.container}>
-      <div className={styles.imageContainer}>
+      <motion.div
+        ref={ref}
+        className={styles.imageContainer}
+        variants={{
+          initial: { opacity: 0, y: 75 },
+          visible: { opacity: 1, y: 0 },
+        }}
+        initial="initial"
+        animate={animationControl}
+        transition={{ duration: 1.4, delay: 0.3 }}
+      >
         <img
           src={data.projectImage}
           className={styles.projectImage}
           alt="logo"
         />
-      </div>
+      </motion.div>
       <div className={styles.detailsContainer}>
         <div className={styles.logoContainer}>
           <div className={styles.logoImage}>
@@ -20,7 +46,12 @@ export const PortfolioCard = ({ data }) => {
           </div>
 
           {data?.link ? (
-            <Link className={styles.button} to={data.link}>
+            <Link
+              className={styles.button}
+              to={data.link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <p className={styles.link}>Visit Site</p>
             </Link>
           ) : (

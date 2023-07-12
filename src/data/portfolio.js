@@ -3,11 +3,11 @@ export const data = [
     projectName: "Skillojo",
     projectType: "Freelance Client",
     companylogo: require("../assets/images/skillojo.webp"),
-    projectImage: require("../assets/images/appointy_screen.png"),
+    projectImage: require("../assets/images/skillojo_screen.png"),
     description:
-      "MasterFraming can arrange all your framing and related services under one roof. Furthermore, Master Framing offers pickup and delivery in the Sydney region and courier delivery across the nation.",
+      "Skillojo is an AI-enabled Job Description Builder Platform that help organizations and candidates make faster-recruiting decisions.You can now hire for attitude and train for skills with Skillojo’s AI-powered talent acquisition platform.",
     status: "Online",
-    tech: ["Next.JS"],
+    tech: ["Next.JS", "SCSS", "Redux"],
     details: [
       {
         id: 7,
@@ -21,11 +21,11 @@ export const data = [
     projectName: "MasterFraming",
     projectType: "Freelance Client",
     companylogo: require("../assets/images/masterframing.jpg"),
-    projectImage: require("../assets/images/appointy_screen.png"),
+    projectImage: require("../assets/images/masterframing_screen.png"),
     description:
       "MasterFraming can arrange all your framing and related services under one roof. Furthermore, Master Framing offers pickup and delivery in the Sydney region and courier delivery across the nation.",
     status: "Online",
-    tech: ["Next.JS"],
+    tech: ["Next.JS", "Postman", "Lighthouse"],
     details: [
       {
         id: 6,
@@ -39,7 +39,7 @@ export const data = [
     projectName: "DigiPay",
     projectType: "Company Project",
     companylogo: require("../assets/images/digipay.png"),
-    projectImage: require("../assets/images/appointy_screen.png"),
+    projectImage: require("../assets/images/digipay_screen.png"),
     description:
       "DigiPay is a wallet payment service platform for Digisuvidha customers",
     status: "Online - Internal Use",
@@ -47,7 +47,7 @@ export const data = [
     details: [
       {
         id: 5,
-        duration: "2 Months",
+        duration: "5 Months",
         role: "Full Stack Developer",
       },
     ],
@@ -56,9 +56,9 @@ export const data = [
     projectName: "DigiSuvidha",
     projectType: "Company Project",
     companylogo: require("../assets/images/digisuvidha.png"),
-    projectImage: require("../assets/images/appointy_screen.png"),
+    projectImage: require("../assets/images/digisuvidha_screen.png"),
     description:
-      "DigiSuvidha.com is a service aggregator platform for retail businesses, with over 100+ franchises",
+      "DigiSuvidha is a service aggregator platform for retail businesses, with over 750+ franchises",
     status: "Offline - Site Revamped as business model changed",
     tech: ["React", "Bootstrap"],
     details: [
@@ -68,13 +68,13 @@ export const data = [
         role: "React Developer",
       },
     ],
-    link: "http://digisuvidha.com/",
+    link: "https://digisuvidha.netlify.app/",
   },
   {
     projectName: "Dephyn",
     projectType: "Company Project",
     companylogo: require("../assets/images/phyction.png"),
-    projectImage: require("../assets/images/appointy_screen.png"),
+    projectImage: require("../assets/images/dephyn_screen.png"),
     description:
       "Dephyn is a project management and report generation tool used internally at Phyction Ai Labs",
     status: "Online - Internal Use",
@@ -82,7 +82,7 @@ export const data = [
     details: [
       {
         id: 3,
-        duration: "2 Months",
+        duration: "6 Months",
         role: "Full Stack Developer",
       },
     ],
@@ -93,13 +93,13 @@ export const data = [
     companylogo: require("../assets/images/appointy.png"),
     projectImage: require("../assets/images/appointy_screen.png"),
     description:
-      "DeliSpeed is an online booking  platform for various services",
+      "Appointy is an online appointment booking  platform. Save time spent on coordinating appointments over phone and email with an all-in-one appointment booking software",
     status: "Online",
-    tech: ["React"],
+    tech: ["React", "Moment.JS"],
     details: [
       {
         id: 2,
-        duration: "2 Months",
+        duration: "3 Months",
         role: "React Developer",
       },
     ],
@@ -109,7 +109,7 @@ export const data = [
     projectName: "Medclick",
     projectType: "Freelance Client",
     companylogo: require("../assets/images/medclick.jpeg"),
-    projectImage: require("../assets/images/appointy_screen.png"),
+    projectImage: require("../assets/images/medclick_screen.png"),
     description:
       "Medclick.com(TM) is the first digital health management software platform that combines the benefits of artificial intelligence, blockchain technology and humanintelligence to deliver outstanding healthcare services",
     status: "Offline - Site Revamped as business model changed",
