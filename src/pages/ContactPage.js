@@ -4,7 +4,7 @@ import HeaderText from "../components/HeaderText";
 import styles from "../styles/pages/Contact.module.css";
 
 import PageTransition from "../components/PageTransition";
-import Reveal from "../components/Reveal";
+// import Reveal from "../components/Reveal";
 
 export default function ContactPage() {
   return (
