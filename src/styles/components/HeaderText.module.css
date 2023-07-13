@@ -1,6 +1,6 @@
 .headerText {
   text-align: center;
-  padding: 2.6rem 0rem;
+  padding: 40px 0;
   margin: 0;
   font-size: 3rem;
   font-weight: 900;
@@ -22,12 +22,12 @@
 }
 
 /* On screens that are 992px wide or less*/
-@media screen and (max-width: 992px) {
+/* @media screen and (max-width: 992px) {
   .headerText::before{
     font-size: 4rem;
     top: 5vh;
   }
-}
+} */
 
 /* On screens that are 772px wide or less*/
 @media screen and (max-width: 772px) {
@@ -37,7 +37,7 @@
 
   .headerText::before{
     font-size: 3rem;
-    top: 5vh;
+    top: 1.8rem;
   }
 }
 
