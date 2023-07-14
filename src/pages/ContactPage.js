@@ -45,9 +45,10 @@ export default function ContactPage() {
                               <img
                                 className={styles.logo}
                                 src={data.logo}
-                                alt="phone"
+                                alt={data.alt}
                               />
                             </div>
+
                             {data.link ? (
                               <Link
                                 to={data.link}
