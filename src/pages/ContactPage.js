@@ -91,6 +91,7 @@ export default function ContactPage() {
 
                             {data.link ? (
                               <Link
+                                className={styles.linkText}
                                 to={data.link}
                                 target="_blank"
                                 rel="noopener noreferrer"
@@ -162,9 +163,8 @@ export default function ContactPage() {
                           <div className={styles.infoContainer}>
                             {infoData?.map((data) => {
                               return (
-                                <div>
+                                <div key={data.name}>
                                   <input
-                                    key={data.name}
                                     value={values[data.name]}
                                     type={data.type}
                                     className={styles.info}
@@ -174,7 +174,10 @@ export default function ContactPage() {
                                     onChange={handleChange(data.name)}
                                     onBlur={handleBlur(data.name)}
                                   />
-                                  <div id={styles.textType} className={styles.error}>
+                                  <div
+                                    id={styles.textType}
+                                    className={styles.error}
+                                  >
                                     {touched[data.name] && errors[data.name]}
                                   </div>
                                 </div>
@@ -226,7 +229,9 @@ export default function ContactPage() {
                                 </div>
                               );
                             })}
-                            <div id={styles.fullWidth} className={styles.error}>{touched["budget"] && errors["budget"]}</div>
+                            <div id={styles.fullWidth} className={styles.error}>
+                              {touched["budget"] && errors["budget"]}
+                            </div>
                           </div>
                           <p className={styles.heading}>
                             Tell me about your project
@@ -240,12 +245,21 @@ export default function ContactPage() {
                               onChange={handleChange("description")}
                               onBlur={handleBlur("description")}
                             />
-                            <div id={styles.description} className={styles.error}>{touched["description"] && errors["description"]}</div>
+                            <div
+                              id={styles.description}
+                              className={styles.error}
+                            >
+                              {touched["description"] && errors["description"]}
+                            </div>
                           </div>
 
                           <div className={styles.buttonContainer}>
-                            <button className={styles.button} type="submit" disabled={!(isValid && dirty)}>
-                              {!(isValid && dirty)?'Complete Form':'Submit'}
+                            <button
+                              className={styles.button}
+                              type="submit"
+                              disabled={!(isValid && dirty)}
+                            >
+                              {!(isValid && dirty) ? "Complete Form" : "Submit"}
                             </button>
                           </div>
                         </form>

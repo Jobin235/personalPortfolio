@@ -74,10 +74,13 @@
 }
 
 .detail {
-  text-decoration: none;
   color: white;
   font-size: 1.2rem;
   padding-left: 1rem;
+}
+
+.linkText {
+  text-decoration: none;
 }
 
 .formSection {
@@ -241,7 +244,7 @@ textarea:focus {
   grid-column: 1/4;
 }
 
-#description{
+#description {
   text-align: center;
 }
 
