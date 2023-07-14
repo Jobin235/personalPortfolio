@@ -204,11 +204,16 @@ textarea:focus {
   transition: all 0.2s ease-in-out;
 }
 
-/* On screens that are 1330px wide or less */
-@media screen and (max-width: 1330px) {
+/* On screens that are 1430px wide or less */
+@media screen and (max-width: 1430px) {
   .details {
     grid-template-columns: 1fr;
     gap: 40px;
+  }
+
+  .contactsContainer{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -227,6 +232,9 @@ textarea:focus {
   .serviceContainer,
   .budgetContainer {
     grid-template-columns: 1fr;
+  }
+  .contactsContainer{
+    display: block
   }
 }
 

@@ -55,11 +55,11 @@ export default function ContactPage() {
                                 target="_blank"
                                 rel="noopener noreferrer"
                               >
-                                <p
-                                  id={styles.clickable}
-                                  className={styles.detail}
-                                >
-                                  {data.type} : {data.detail}
+                                <p className={styles.detail}>
+                                  {data.type} :{" "}
+                                  <span id={styles.clickable}>
+                                    {data.detail}
+                                  </span>
                                 </p>
                               </Link>
                             ) : (
