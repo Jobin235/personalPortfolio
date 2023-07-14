@@ -31,26 +31,32 @@ export const infoData = [
   {
     placeholder: "First Name",
     name: "first_name",
+    type: 'text'
   },
   {
     placeholder: "Last Name",
     name: "last_name",
+    type: 'text'
   },
   {
     placeholder: "Email address",
     name: "email",
+    type: 'email'
   },
   {
     placeholder: "Company Name",
-    name: "comapny",
+    name: "company",
+    type: 'text'
   },
   {
     placeholder: "Phone Number",
     name: "phone",
+    type: 'number'
   },
   {
     placeholder: "Country",
     name: "country",
+    type: 'text'
   },
 ];
 export const serviceData = [

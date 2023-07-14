@@ -1,10 +1,15 @@
 import React from "react";
 
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { Formik } from "formik";
+import * as Yup from "yup";
+
 import HeaderText from "../components/HeaderText";
 import styles from "../styles/pages/Contact.module.css";
 
 import PageTransition from "../components/PageTransition";
-// import Reveal from "../components/Reveal";
+import Reveal from "../components/Reveal";
 import {
   contactData,
   infoData,
@@ -12,9 +17,29 @@ import {
   budgetData,
 } from "../data/contact";
 
-import { Link } from "react-router-dom";
-
 export default function ContactPage() {
+  const validationSchema = Yup.object().shape({
+    first_name: Yup.string().required("First Name is required"),
+    last_name: Yup.string().required("Last Name is  required"),
+    email: Yup.string()
+      .email("Please enter a valid email")
+      .required("Email is required"),
+    country: Yup.string().required("Country Name is required"),
+    services: Yup.array().min(
+      1,
+      "You must select atleast one service category"
+    ),
+    budget: Yup.string().required("Please specify your anticipated budget"),
+    description: Yup.string().required("Please provide a short description"),
+  });
+
+  const handleSubmit = ({ ...values }, { setFieldError }) => {
+    console.log("values", values);
+    setTimeout(() => {
+      setFieldError("email", "This email is already taken");
+    }, 1000);
+  };
+
   return (
     <div className={styles.container}>
       <HeaderText text="Contact" />
@@ -24,30 +49,45 @@ export default function ContactPage() {
             <div className={styles.cardContent}>
               <div className={styles.details}>
                 <div className={styles.contactSection}>
-                  <p className={styles.mainhead}>Get in touch</p>
-                  <p className={styles.subhead}>
-                    Let's talk about your project
-                  </p>
-                  <p className={styles.subtitle}>
-                    Thinking about a new project, a problem to solve, or just
-                    want to connect? Let's do it!
-                    <br />
-                    <br />
-                    <br />
-                    Use the form on this page or get in touch by other means.
-                  </p>
+                  <Reveal>
+                    <p className={styles.mainhead}>Get in touch</p>
+                  </Reveal>
+                  <Reveal>
+                    <p className={styles.subhead}>
+                      Let's talk about your project
+                    </p>
+                  </Reveal>
+                  <Reveal>
+                    <p className={styles.subtitle}>
+                      <span>
+                        Thinking about a new project, a problem to solve, or
+                        just want to connect? Let's do it!
+                      </span>
+
+                      <br />
+                      <br />
+                      <br />
+                      <span>
+                        Use the form on this page or get in touch by other
+                        means.
+                      </span>
+                    </p>
+                  </Reveal>
+
                   <div className={styles.contactDetails}>
                     <div className={styles.contactsContainer}>
                       {contactData?.map((data) => {
                         return (
                           <div key={data.type} className={styles.contacts}>
-                            <div className={styles.logoContainer}>
-                              <img
-                                className={styles.logo}
-                                src={data.logo}
-                                alt={data.alt}
-                              />
-                            </div>
+                            <Reveal>
+                              <div className={styles.logoContainer}>
+                                <img
+                                  className={styles.logo}
+                                  src={data.logo}
+                                  alt={data.alt}
+                                />
+                              </div>
+                            </Reveal>
 
                             {data.link ? (
                               <Link
@@ -55,17 +95,21 @@ export default function ContactPage() {
                                 target="_blank"
                                 rel="noopener noreferrer"
                               >
-                                <p className={styles.detail}>
-                                  {data.type} :{" "}
-                                  <span id={styles.clickable}>
-                                    {data.detail}
-                                  </span>
-                                </p>
+                                <Reveal>
+                                  <p className={styles.detail}>
+                                    {data.type} :{" "}
+                                    <span id={styles.clickable}>
+                                      {data.detail}
+                                    </span>
+                                  </p>
+                                </Reveal>
                               </Link>
                             ) : (
-                              <p className={styles.detail}>
-                                {data.type} : {data.detail}
-                              </p>
+                              <Reveal>
+                                <p className={styles.detail}>
+                                  {data.type} : {data.detail}
+                                </p>
+                              </Reveal>
                             )}
                           </div>
                         );
@@ -73,70 +117,142 @@ export default function ContactPage() {
                     </div>
                   </div>
                 </div>
-                <div className={styles.formSection}>
-                  <form>
-                    <p className={styles.heading}>Your contact information</p>
-                    <div className={styles.infoContainer}>
-                      {infoData?.map((data) => {
-                        return (
-                          <input
-                            key={data.name}
-                            type="text"
-                            className={styles.info}
-                            placeholder={data.placeholder}
-                            name={data.name}
-                            required
-                          />
-                        );
-                      })}
-                    </div>
-                    <p className={styles.heading}>
-                      What services do you need for your project?
-                    </p>
-                    <div className={styles.serviceContainer}>
-                      {serviceData?.map((data) => {
-                        return (
-                          <div key={data.label} className={styles.serviceGroup}>
-                            <input
-                              type="checkbox"
-                              name="services[]"
-                              value={data.value}
+                <motion.div
+                  className={styles.formSection}
+                  variants={{
+                    initial: { opacity: 0, y: 75 },
+                    visible: { opacity: 1, y: 0 },
+                  }}
+                  initial="initial"
+                  animate="visible"
+                  transition={{ duration: 1.4, delay: 0.3 }}
+                >
+                  <Formik
+                    initialValues={{
+                      first_name: "",
+                      last_name: "",
+                      email: "",
+                      company: "",
+                      phone: "",
+                      country: "",
+                      services: [],
+                      budget: "",
+                      description: "",
+                    }}
+                    onSubmit={(values, errors) => {
+                      handleSubmit(values, errors);
+                    }}
+                    validationSchema={validationSchema}
+                  >
+                    {({
+                      values,
+                      errors,
+                      touched,
+                      isValid,
+                      dirty,
+                      handleSubmit,
+                      handleChange,
+                      handleBlur,
+                    }) => {
+                      return (
+                        <form noValidate onSubmit={handleSubmit}>
+                          <p className={styles.heading}>
+                            Your contact information
+                          </p>
+                          <div className={styles.infoContainer}>
+                            {infoData?.map((data) => {
+                              return (
+                                <div>
+                                  <input
+                                    key={data.name}
+                                    value={values[data.name]}
+                                    type={data.type}
+                                    className={styles.info}
+                                    placeholder={data.placeholder}
+                                    name={data.name}
+                                    maxLength={50}
+                                    onChange={handleChange(data.name)}
+                                    onBlur={handleBlur(data.name)}
+                                  />
+                                  <div id={styles.textType} className={styles.error}>
+                                    {touched[data.name] && errors[data.name]}
+                                  </div>
+                                </div>
+                              );
+                            })}
+                          </div>
+                          <p className={styles.heading}>
+                            What services do you need for your project?
+                          </p>
+                          <div className={styles.serviceContainer}>
+                            {serviceData?.map((data) => {
+                              return (
+                                <div key={data.label}>
+                                  <div className={styles.serviceGroup}>
+                                    <input
+                                      type="checkbox"
+                                      checked={values[data.value]}
+                                      name="services"
+                                      value={data.value}
+                                      onChange={handleChange("services")}
+                                      onBlur={handleBlur("services")}
+                                    />
+                                    <label className={styles.label}>
+                                      {data.label}
+                                    </label>
+                                  </div>
+                                </div>
+                              );
+                            })}
+                            <div id={styles.fullWidth} className={styles.error}>
+                              {touched["services"] && errors["services"]}
+                            </div>
+                          </div>
+                          <p className={styles.heading}>
+                            How much is the anticipated budget?
+                          </p>
+                          <div className={styles.budgetContainer}>
+                            {budgetData?.map((data) => {
+                              return (
+                                <div key={data} className={styles.radioGroup}>
+                                  <input
+                                    type="radio"
+                                    name="budget"
+                                    value={data}
+                                    onChange={handleChange("budget")}
+                                    onBlur={handleBlur("budget")}
+                                  />
+                                  <label className={styles.label}>{data}</label>
+                                </div>
+                              );
+                            })}
+                            <div id={styles.fullWidth} className={styles.error}>{touched["budget"] && errors["budget"]}</div>
+                          </div>
+                          <p className={styles.heading}>
+                            Tell me about your project
+                          </p>
+                          <div className={styles.descriptionContainer}>
+                            <textarea
+                              placeholder="Project description (max: 750 characters)"
+                              name="description"
+                              rows="6"
+                              maxLength={750}
+                              onChange={handleChange("description")}
+                              onBlur={handleBlur("description")}
                             />
-                            <label className={styles.label}>{data.label}</label>
+                            <div id={styles.description} className={styles.error}>{touched["description"] && errors["description"]}</div>
                           </div>
-                        );
-                      })}
-                    </div>
-                    <p className={styles.heading}>
-                      How much is the anticipated budget?
-                    </p>
-                    <div className={styles.budgetContainer}>
-                      {budgetData?.map((data) => {
-                        return (
-                          <div key={data} className={styles.radioGroup}>
-                            <input type="radio" name="budget" required />
-                            <label className={styles.label}>{data}</label>
-                          </div>
-                        );
-                      })}
-                    </div>
-                    <p className={styles.heading}>Tell me about your project</p>
-                    <div className={styles.descriptionContainer}>
-                      <textarea
-                        placeholder="Project description"
-                        name="description"
-                        rows="6"
-                        required
-                      />
-                    </div>
 
-                    <div className={styles.buttonContainer}>
-                      <button className={styles.button} type="submit">
-                        Submit
-                      </button>
-                    </div>
-                  </form>
-                </div>
+                          <div className={styles.buttonContainer}>
+                            <button className={styles.button} type="submit" disabled={!(isValid && dirty)}>
+                              {!(isValid && dirty)?'Complete Form':'Submit'}
+                            </button>
+                          </div>
+                        </form>
+                      );
+                    }}
+                  </Formik>
+                </motion.div>
               </div>
             </div>
           </div>
