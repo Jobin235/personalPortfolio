@@ -15,3 +15,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/** Used to position the icon **/
+.Toastify__toast-icon {
+  rotate: -22deg !important;
+}
+
+/** Used to position the close-button **/
+.Toastify__close-button {
+  rotate: -22deg !important;
+}

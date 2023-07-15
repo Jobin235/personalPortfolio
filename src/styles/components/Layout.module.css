@@ -3,11 +3,11 @@
   grid-template-columns: 0px auto;
 }
 
-.sidemenu{
-grid-column: 1/2;
+.sidemenu {
+  grid-column: 1/2;
 }
 
-.children{
+.children {
   grid-column: 2/3;
 }
 
@@ -19,7 +19,7 @@ grid-column: 1/2;
 ::-webkit-scrollbar-thumb {
   border-radius: 4px;
   background-color: rgb(255, 255, 255, 0.3);
-  box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+  box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
 }
 
 /* On screens that are 572px high or less */
@@ -30,7 +30,7 @@ grid-column: 1/2;
 }
 /* On windows that zooms to 125% by default */
 @media (-webkit-device-pixel-ratio: 1.25) {
-  .children{
+  .children {
     zoom: 0.8;
   }
 }

@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Formik } from "formik";
 import * as Yup from "yup";
+import { toast } from "react-toastify";
 
 import HeaderText from "../components/HeaderText";
 import styles from "../styles/pages/Contact.module.css";
@@ -33,11 +34,10 @@ export default function ContactPage() {
     description: Yup.string().required("Please provide a short description"),
   });
 
-  const handleSubmit = ({ ...values }, { setFieldError }) => {
+  const handleSubmit = ({ ...values },) => {
     console.log("values", values);
-    setTimeout(() => {
-      setFieldError("email", "This email is already taken");
-    }, 1000);
+    toast.success("Email sent successfully!", { theme: "dark" });
+    toast.error("Something went wrong. Try again!", { theme: "dark" });
   };
 
   return (
