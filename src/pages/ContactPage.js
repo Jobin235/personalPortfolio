@@ -34,10 +34,11 @@ export default function ContactPage() {
     description: Yup.string().required("Please provide a short description"),
   });
 
-  const handleSubmit = ({ ...values },) => {
+  const handleSubmit = ({ ...values }, helpers) => {
     console.log("values", values);
     toast.success("Email sent successfully!", { theme: "dark" });
     toast.error("Something went wrong. Try again!", { theme: "dark" });
+    helpers.resetForm();
   };
 
   return (
@@ -140,8 +141,8 @@ export default function ContactPage() {
                       budget: "",
                       description: "",
                     }}
-                    onSubmit={(values, errors) => {
-                      handleSubmit(values, errors);
+                    onSubmit={async (values, helpers) => {
+                      handleSubmit(values, helpers);
                     }}
                     validationSchema={validationSchema}
                   >
@@ -194,7 +195,11 @@ export default function ContactPage() {
                                   <div className={styles.serviceGroup}>
                                     <input
                                       type="checkbox"
-                                      checked={values[data.value]}
+                                      checked={
+                                        values["services"].includes(data.value)
+                                          ? true
+                                          : false
+                                      }
                                       name="services"
                                       value={data.value}
                                       onChange={handleChange("services")}
@@ -221,6 +226,9 @@ export default function ContactPage() {
                                   <input
                                     type="radio"
                                     name="budget"
+                                    checked={
+                                      values["budget"] === data ? true : false
+                                    }
                                     value={data}
                                     onChange={handleChange("budget")}
                                     onBlur={handleBlur("budget")}
@@ -241,6 +249,7 @@ export default function ContactPage() {
                               placeholder="Project description (max: 750 characters)"
                               name="description"
                               rows="6"
+                              value={values["description"]}
                               maxLength={750}
                               onChange={handleChange("description")}
                               onBlur={handleBlur("description")}
