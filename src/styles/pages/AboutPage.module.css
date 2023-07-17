@@ -28,13 +28,13 @@
 .name {
   font-size: 3.4rem;
   filter: drop-shadow(2px 4px 6px black);
-  margin: 1.5rem 0;
+  margin: 1rem 0;
   margin-top: 1rem;
 }
 
 .designation {
   margin: 1.5rem 0;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   font-size: 3.4rem;
   filter: drop-shadow(2px 4px 6px black);
   background: -webkit-linear-gradient(90deg, #00c461, #c2fa39);
@@ -45,7 +45,10 @@
 
 .detail {
   font-size: 1.25rem;
+  line-height: 2rem;
   text-align: justify;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .image {
@@ -95,7 +98,7 @@
   background-color: #262629;
   box-shadow: 1px 1px #595959;
   padding: 1rem;
-  margin: 2.5rem 0rem;
+  margin: 2rem 0rem;
 }
 
 .status {

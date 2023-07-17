@@ -33,11 +33,14 @@
 }
 
 .mainhead {
+  margin-top: 0rem;
+  margin-bottom: 1rem;
   font-size: 2.5rem;
   font-weight: bold;
 }
 
 .subhead {
+  margin: 1rem 0rem;
   font-size: 2.5rem;
   font-weight: bold;
   background: -webkit-linear-gradient(90deg, #00c461, #c2fa39);
@@ -48,6 +51,7 @@
 
 .subtitle {
   font-size: 1.25rem;
+  line-height: 2rem;
 }
 
 .contacts {

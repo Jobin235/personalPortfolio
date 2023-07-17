@@ -28,11 +28,12 @@ export default function AboutPage() {
 
                 <Reveal>
                   <p className={styles.detail}>
-                    An engineering graduate who have been working on web
-                    development technologies since 2019 and is a self-motivated
-                    and self-taught professional who likes to solve problems. I
-                    merge a passion for usability and user experience with
-                    technical knowledge to create cool digital experiences.
+                    I'm an engineering graduate who has been working as a full
+                    stack web developer since 2019. I enjoy tackling complex problems
+                    with innovative solutions. With my proven remote work
+                    experience and international client collaborations, I am
+                    confident in my ability to deliver high-quality code that
+                    meets and exceeds project requirements.
                   </p>
                 </Reveal>
                 <Reveal>
@@ -68,10 +69,10 @@ export default function AboutPage() {
                 </div>
               </div>
 
-                <div className={styles.image}>
-                  <img className={styles.heroImage} src={hero} alt="work" />
-                  <div className={styles.nameCard}>Jobin Joy</div>
-                </div>
+              <div className={styles.image}>
+                <img className={styles.heroImage} src={hero} alt="work" />
+                <div className={styles.nameCard}>Jobin Joy</div>
+              </div>
             </div>
           </div>
         </div>

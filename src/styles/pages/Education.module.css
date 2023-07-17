@@ -26,7 +26,7 @@
 }
 .date {
   font-size: 1.25rem !important;
-  color: greenyellow !important;
+  /* color: greenyellow !important; */
   font-weight: bold !important;
 }
 
@@ -40,6 +40,7 @@
 
 #institute {
   font-size: 1.5rem;
+  padding-top: 1rem;
 }
 
 #description {

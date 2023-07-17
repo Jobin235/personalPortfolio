@@ -40,7 +40,7 @@ export default function HomePage() {
           placeSelf: "center",
         }}
       >
-        <p className={styles.smallHead}>I'm</p>
+        {/* <p className={styles.smallHead}>I am</p> */}
         <p className={styles.largeHead}>JOBIN JOY</p>
         <p className={styles.smallHeadTyped}>
           <Typed

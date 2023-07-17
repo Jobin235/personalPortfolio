@@ -2,6 +2,7 @@
   text-align: center;
   padding: 40px 0;
   margin: 0;
+  color: white;
   font-size: 3rem;
   font-weight: 900;
   text-transform: uppercase;
@@ -11,7 +12,7 @@
 .headerText::before {
   width: 100%;
   content: attr(text);
-  color: rgb(117, 116, 116);
+  color: white;
   font-size: 5rem;
   z-index: 0;
   left: 50%;

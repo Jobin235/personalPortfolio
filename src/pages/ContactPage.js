@@ -67,7 +67,6 @@ export default function ContactPage() {
 
                       <br />
                       <br />
-                      <br />
                       <span>
                         Use the form on this page or get in touch by other
                         means.

@@ -1,8 +1,8 @@
 .smallHead {
   margin: 0;
-  font-size: 1.5em;
+  font-size: 3em;
   padding-top: 1em;
-  padding-bottom: 1em;
+  padding-bottom: 0.5em;
   font-weight: bold;
 }
 
@@ -10,17 +10,17 @@
   margin: 0;
   font-size: 1.5em;
   padding-top: 1em;
-  padding-bottom: 1em;
+  padding-bottom: 0.5em;
   font-weight: bold;
   text-transform: uppercase;
 }
 
 .largeHead {
   margin: 0;
-  font-size: 2em;
+  font-size: 3em;
+  padding-top: 2rem;
+  text-align: center;
   font-weight: bold;
-  text-shadow: 0px 1px #000000, 1px 0px #969592, -1px 2px #000000,
-    -2px 1px #969592;
 }
 
 .wheelSvg {
