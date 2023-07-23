@@ -29,10 +29,10 @@ export default function AboutPage() {
                 <Reveal>
                   <p className={styles.detail}>
                     I'm an engineering graduate who has been working as a full
-                    stack web developer since 2019. I enjoy tackling complex problems
-                    with innovative solutions. With my proven remote work
-                    experience and international client collaborations, I am
-                    confident in my ability to deliver high-quality code that
+                    stack web developer since 2019. I enjoy tackling complex
+                    problems with innovative solutions. With my proven remote
+                    work experience and international client collaborations, I
+                    am confident in my ability to deliver high-quality code that
                     meets and exceeds project requirements.
                   </p>
                 </Reveal>
@@ -65,7 +65,9 @@ export default function AboutPage() {
                 </div>
 
                 <div className={styles.buttonContainer}>
-                  <button className={styles.button}>Download Resume</button>
+                  <a href="/files/Jobin_Joy_Resume.pdf" target="_blank" download>
+                    <button className={styles.button}>Download Resume</button>
+                  </a>
                 </div>
               </div>
 
