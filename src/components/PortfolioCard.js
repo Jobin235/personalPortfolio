@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import styles from "../styles/components/PortfolioCard.module.css";
 import { Link } from "react-router-dom";
 import Reveal from "./Reveal";
-import github from "../assets/images/github.png";
+import github from "../assets/images/logos/github.png";
 
 import { motion, useAnimation, useInView } from "framer-motion";
 
@@ -119,25 +119,25 @@ export const PortfolioCard = ({ data }) => {
           })}
         </div>
         <div className={styles.gitContainer}>
-        <div className={styles.statusContainer}>
-          <Reveal>
-            <p className={styles.heading}>Current Status</p>
-          </Reveal>
-          <Reveal>
-            <p
-              id={
-                data?.status.includes("Offline")
-                  ? styles.offline
-                  : styles.online
-              }
-              className={styles.status}
-            >
-              {data.status}
-            </p>
-          </Reveal>
-        </div>
+          <div className={styles.statusContainer}>
+            <Reveal>
+              <p className={styles.heading}>Current Status</p>
+            </Reveal>
+            <Reveal>
+              <p
+                id={
+                  data?.status.includes("Offline")
+                    ? styles.offline
+                    : styles.online
+                }
+                className={styles.status}
+              >
+                {data.status}
+              </p>
+            </Reveal>
+          </div>
 
-        {data?.github ? (
+          {data?.github ? (
             <Link
               className={styles.github}
               to={data.github}
@@ -145,7 +145,7 @@ export const PortfolioCard = ({ data }) => {
               rel="noopener noreferrer"
             >
               <div className={styles.gitImage}>
-                <img className={styles.github} src={github} alt='github'/>
+                <img className={styles.github} src={github} alt="github" />
               </div>
             </Link>
           ) : (

@@ -4,7 +4,7 @@ export default function PageTransition({ children }) {
   const springAnimation = {
     animate: {
       scale: [0.8, 0.8, 1],
-      y: [window.innerHeight, 0, 0],
+      y: [document.body.scrollHeight, 0, 0],
       transition: {
         duration: 0.6,
         ease: "easeInOut",

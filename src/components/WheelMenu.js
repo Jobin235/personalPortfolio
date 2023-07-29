@@ -4,14 +4,14 @@ import { AppContext } from "../utils/context";
 
 import styles from "../styles/components/WheelMenu.module.css";
 
-import about from "../assets/images/about.png";
-import education from "../assets/images/education.png";
-import skills from "../assets/images/skills.png";
-import contact from "../assets/images/contact.png";
-import portfolio from "../assets/images/portfolio.png";
-import client from "../assets/images/client.png";
-import work from "../assets/images/work.png";
-import library from "../assets/images/library.png";
+import about from "../assets/images/sidemenu/about.png";
+import education from "../assets/images/sidemenu/education.png";
+import skills from "../assets/images/sidemenu/skills.png";
+import contact from "../assets/images/sidemenu/contact.png";
+import portfolio from "../assets/images/sidemenu/portfolio.png";
+import client from "../assets/images/sidemenu/client.png";
+import work from "../assets/images/sidemenu/work.png";
+import library from "../assets/images/sidemenu/library.png";
 
 export default function WheelMenu() {
   const [hoveredMenu, setHoveredMenu] = useState("SELECT AN OPTION");

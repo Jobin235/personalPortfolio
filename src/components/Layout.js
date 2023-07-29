@@ -8,10 +8,10 @@ export default function Layout({ children }) {
   return (
     <div className={styles.container}>
       <SideMenu className={styles.sidemenu} />
-      <main className={styles.children}>
+      <div className={styles.children}>
         <ToastContainer />
         {children}
-      </main>
+      </div>
       <ScrollUpButton />
     </div>
   );

@@ -1,4 +1,64 @@
 .container {
   background: rgb(39, 39, 39);
-  min-height: 200vh;
+  min-height: 100vh;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 100px auto 100px;
+}
+
+.card {
+  grid-column: 2/4;
+  background-color: #18181b;
+  margin: 0px 50px 20px 20px;
+  border-radius: 15px;
+  box-shadow: 2px 2px #595959;
+}
+
+.cardContent {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.details {
+  padding: 40px;
+}
+
+.subText{
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-bottom: 3.5rem;
+  padding-top: 2.5rem;
+  text-align: center;
+}
+
+.clients{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  align-items: center;
+}
+
+.imageContainer{
+  width: 250px;
+  height: 250px;
+  padding-right: 1rem;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.image{
+  width: 100%;
+  margin: 2rem 0rem;
+  filter: grayscale(1);
+}
+
+.imageContainer:hover .image{
+  position: relative;
+  object-fit: contain;
+  filter: grayscale(0);
 }

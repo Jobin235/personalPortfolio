@@ -2,8 +2,8 @@ export const data = [
   {
     projectName: "Skillojo",
     projectType: "Freelance Client",
-    companylogo: require("../assets/images/skillojo.webp"),
-    projectImage: require("../assets/images/skillojo_screen.png"),
+    companylogo: require("../assets/images/logos/skillojo.webp"),
+    projectImage: require("../assets/images/screens/skillojo_screen.png"),
     description:
       "Skillojo is an AI-enabled Job Description Builder Platform that help organizations and candidates make faster-recruiting decisions.You can now hire for attitude and train for skills with Skillojo’s AI-powered talent acquisition platform.",
     status: "Online",
@@ -20,8 +20,8 @@ export const data = [
   {
     projectName: "MasterFraming",
     projectType: "Freelance Client",
-    companylogo: require("../assets/images/masterframing.jpg"),
-    projectImage: require("../assets/images/masterframing_screen.png"),
+    companylogo: require("../assets/images/logos/masterframing.jpg"),
+    projectImage: require("../assets/images/screens/masterframing_screen.png"),
     description:
       "MasterFraming can arrange all your framing and related services under one roof. Furthermore, Master Framing offers pickup and delivery in the Sydney region and courier delivery across the nation.",
     status: "Online",
@@ -38,8 +38,8 @@ export const data = [
   {
     projectName: "DigiPay",
     projectType: "Company Project",
-    companylogo: require("../assets/images/digipay.png"),
-    projectImage: require("../assets/images/digipay_screen.png"),
+    companylogo: require("../assets/images/logos/digipay.png"),
+    projectImage: require("../assets/images/screens/digipay_screen.png"),
     description:
       "DigiPay is a wallet payment service platform for Digisuvidha customers",
     status: "Online - Internal Use",
@@ -55,8 +55,8 @@ export const data = [
   {
     projectName: "DigiSuvidha",
     projectType: "Company Project",
-    companylogo: require("../assets/images/digisuvidha.png"),
-    projectImage: require("../assets/images/digisuvidha_screen.png"),
+    companylogo: require("../assets/images/logos/digisuvidha.png"),
+    projectImage: require("../assets/images/screens/digisuvidha_screen.png"),
     description:
       "DigiSuvidha is a service aggregator platform for retail businesses, with over 750+ franchises",
     status: "Offline - Site Revamped as business model changed",
@@ -74,8 +74,8 @@ export const data = [
   {
     projectName: "Dephyn",
     projectType: "Company Project",
-    companylogo: require("../assets/images/phyction.png"),
-    projectImage: require("../assets/images/dephyn_screen.png"),
+    companylogo: require("../assets/images/logos/phyction.png"),
+    projectImage: require("../assets/images/screens/dephyn_screen.png"),
     description:
       "Dephyn is a project management and report generation tool used internally at Phyction Ai Labs",
     status: "Online - Internal Use",
@@ -91,8 +91,8 @@ export const data = [
   {
     projectName: "Appointy",
     projectType: "Company Project",
-    companylogo: require("../assets/images/appointy.png"),
-    projectImage: require("../assets/images/appointy_screen.png"),
+    companylogo: require("../assets/images/logos/appointy.png"),
+    projectImage: require("../assets/images/screens/appointy_screen.png"),
     description:
       "Appointy is an online appointment booking  platform. Save time spent on coordinating appointments over phone and email with an all-in-one appointment booking software",
     status: "Online",
@@ -109,8 +109,8 @@ export const data = [
   {
     projectName: "Medclick",
     projectType: "Freelance Client",
-    companylogo: require("../assets/images/medclick.jpeg"),
-    projectImage: require("../assets/images/medclick_screen.png"),
+    companylogo: require("../assets/images/logos/medclick.jpeg"),
+    projectImage: require("../assets/images/screens/medclick_screen.png"),
     description:
       "Medclick.com(TM) is the first digital health management software platform that combines the benefits of artificial intelligence, blockchain technology and humanintelligence to deliver outstanding healthcare services",
     status: "Offline - Site Revamped as business model changed",

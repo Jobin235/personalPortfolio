@@ -19,9 +19,9 @@ export default function PortfolioPage() {
               <div className={styles.details}>
                 {data.map((project) => {
                   return (
-                    <div key={project.projectName}>
+                    <React.Fragment key={project.projectName}>
                       <PortfolioCard data={project} />
-                    </div>
+                    </React.Fragment>
                   );
                 })}
               </div>

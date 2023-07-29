@@ -4,7 +4,7 @@ import { AppContext } from "../utils/context";
 import { useNavigate } from "react-router-dom";
 
 import styles from "../styles/components/SideMenu.module.css";
-import back from "../assets/images/back.png";
+import back from "../assets/images/sidemenu/back.png";
 
 import { motion } from "framer-motion";
 

@@ -1,25 +1,25 @@
 export const contactData = [
   {
-    logo: require("../assets/images/phone.png"),
+    logo: require("../assets/images/logos/phone.png"),
     alt:'phone',
     type: "Phone",
     detail: "+91 9495322806",
   },
   {
-    logo: require("../assets/images/email.png"),
+    logo: require("../assets/images/logos/email.png"),
     alt:'email',
     type: "Gmail",
     detail: "jobinjoy235@gmail.com",
   },
   {
-    logo: require("../assets/images/linkedin.png"),
+    logo: require("../assets/images/logos/linkedin.png"),
     alt:'linkedin',
     type: "Linkedin",
     detail: "jobin0602",
     link: "https://in.linkedin.com/in/jobin0602",
   },
   {
-    logo: require("../assets/images/github.png"),
+    logo: require("../assets/images/logos/github.png"),
     alt:'github',
     type: "Github",
     detail: "Jobin235",
