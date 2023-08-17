@@ -25,7 +25,7 @@
   padding: 40px;
 }
 
-.subText{
+.subText {
   font-size: 1.5rem;
   font-weight: bold;
   padding-bottom: 3.5rem;
@@ -33,14 +33,14 @@
   text-align: center;
 }
 
-.clients{
+.clients {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   justify-items: center;
   align-items: center;
 }
 
-.imageContainer{
+.imageContainer {
   width: 250px;
   height: 250px;
   padding-right: 1rem;
@@ -51,14 +51,49 @@
   -ms-user-select: none;
 }
 
-.image{
+.image {
   width: 100%;
   margin: 2rem 0rem;
   filter: grayscale(1);
 }
 
-.imageContainer:hover .image{
+.imageContainer:hover .image {
   position: relative;
   object-fit: contain;
   filter: grayscale(0);
+}
+
+@media screen and (max-width: 1400px) {
+  .clients {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .clients {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 790px) {
+  .clients {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* On screens that are 772px wide or less */
+@media screen and (max-width: 772px) {
+  .content {
+    display: block;
+  }
+}
+
+/* On screens that are 450px wide or less */
+@media screen and (max-width: 450px) {
+  .card {
+    margin: 0px 10px 20px 10px;
+  }
+  .details {
+    padding: 20px;
+  }
 }
