@@ -9,9 +9,7 @@ import education from "../assets/images/sidemenu/education.png";
 import skills from "../assets/images/sidemenu/skills.png";
 import contact from "../assets/images/sidemenu/contact.png";
 import portfolio from "../assets/images/sidemenu/portfolio.png";
-import client from "../assets/images/sidemenu/client.png";
 import work from "../assets/images/sidemenu/work.png";
-import library from "../assets/images/sidemenu/library.png";
 
 export default function WheelMenu() {
   const [hoveredMenu, setHoveredMenu] = useState("SELECT AN OPTION");
@@ -64,7 +62,7 @@ export default function WheelMenu() {
           className={currentMenu === "Skills" ? styles.activeMenu : ""}
         >
           <path
-            d="M 610 310 A 300 300 0 0 1 522.1320343559643 522.1320343559643  L 451.4213562373095 451.4213562373095 A 200 200 0 0 0 510 310  z"
+            d="M 610 310 A 300 300 0 0 1 460 570 L 410.5 483 A 200 200 0 0 0 510 310 z "
             fill="rgba(255,255,255,0.3)"
           />
           <image href={skills} className={styles.skillsImage} />
@@ -79,7 +77,7 @@ export default function WheelMenu() {
           className={currentMenu === "About" ? styles.activeMenu : ""}
         >
           <path
-            d="M 522.1320343559643 522.1320343559643 A 300 300 0 0 1 310 610  L 310 510 A 200 200 0 0 0 451.4213562373095 451.4213562373095  z"
+            d="M 460 570 A 300 300 0 0 1 157 568 L 203 479 A 200 200 0 0 0 410.5 483 z "
             fill="rgba(255,255,255,0.3)"
           />
           <image href={about} className={styles.aboutImage} />
@@ -94,7 +92,7 @@ export default function WheelMenu() {
           className={currentMenu === "Work" ? styles.activeMenu : ""}
         >
           <path
-            d="M 310 610 A 300 300 0 0 1 97.86796564403576 522.1320343559643  L 168.57864376269052 451.4213562373095 A 200 200 0 0 0 310 510  z"
+            d="M 157 568 A 300 300 0 0 1 10 310 L 110 310 A 200 200 0 0 0 203 479 z "
             fill="rgba(255,255,255,0.3)"
           />
           <image href={work} className={styles.experienceImage} />
@@ -109,7 +107,7 @@ export default function WheelMenu() {
           className={currentMenu === "Portfolio" ? styles.activeMenu : ""}
         >
           <path
-            d="M 97.86796564403576 522.1320343559643 A 300 300 0 0 1 10 310.00000000000006  L 110 310 A 200 200 0 0 0 168.57864376269052 451.4213562373095  z"
+            d="M 10 310 A 300 300 0 0 1 158 51 L 203 141 A 200 200 0 0 0 110 310 z "
             fill="rgba(255,255,255,0.3)"
           />
           <image href={portfolio} className={styles.portfolioImage} />
@@ -124,40 +122,10 @@ export default function WheelMenu() {
           className={currentMenu === "Education" ? styles.activeMenu : ""}
         >
           <path
-            d="M 10 310.00000000000006 A 300 300 0 0 1 97.8679656440357 97.86796564403576  L 168.57864376269046 168.57864376269052 A 200 200 0 0 0 110 310  z"
+            d="M 158 51 A 300 300 0 0 1 459 50 L 410.5 132 A 200 200 0 0 0 203 141 z "
             fill="rgba(255,255,255,0.3)"
           />
           <image href={education} className={styles.educationImage} />
-        </g>
-
-        <g
-          filter="drop-shadow(3px 5px 2px rgb(0 0 0 / 0.8))"
-          onClickCapture={() => handleMenuSelection("Clients")}
-          onMouseEnter={() => handleMouseEnter("CLIENTS")}
-          onMouseLeave={handleMouseLeave}
-          data-menu="Clients"
-          className={currentMenu === "Clients" ? styles.activeMenu : ""}
-        >
-          <path
-            d="M 97.8679656440357 97.86796564403576 A 300 300 0 0 1 309.99999999999994 10  L 309.99999999999994 110 A 200 200 0 0 0 168.57864376269046 168.57864376269052  z"
-            fill="rgba(255,255,255,0.3)"
-          />
-          <image href={client} className={styles.clientImage} />
-        </g>
-
-        <g
-          filter="drop-shadow(3px 5px 2px rgb(0 0 0 / 0.8))"
-          onClickCapture={() => handleMenuSelection("Library")}
-          onMouseEnter={() => handleMouseEnter("LIBRARIES USED")}
-          onMouseLeave={handleMouseLeave}
-          data-menu="Libraries Used"
-          className={currentMenu === "Library" ? styles.activeMenu : ""}
-        >
-          <path
-            d="M 309.99999999999994 10 A 300 300 0 0 1 522.1320343559642 97.8679656440357  L 451.4213562373095 168.57864376269046 A 200 200 0 0 0 309.99999999999994 110  z"
-            fill="rgba(255,255,255,0.3)"
-          />
-          <image href={library} className={styles.libraryImage} />
         </g>
 
         <g
@@ -169,7 +137,7 @@ export default function WheelMenu() {
           className={currentMenu === "Contact" ? styles.activeMenu : ""}
         >
           <path
-            d="M 522.1320343559642 97.8679656440357 A 300 300 0 0 1 610 309.99999999999994  L 510 309.99999999999994 A 200 200 0 0 0 451.4213562373095 168.57864376269046  z"
+            d="M 459 50 A 300 300 0 0 1 610 310 L 510 310 A 200 200 0 0 0 410.5 132 z"
             fill="rgba(255,255,255,0.3)"
           />
           <image href={contact} className={styles.contactImage} />

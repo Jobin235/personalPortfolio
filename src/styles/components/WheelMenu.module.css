@@ -3,14 +3,14 @@
   width: 80px;
   filter: grayscale(1) drop-shadow(rgba(0, 0, 0, 0.8) 3px 5px 2px);
   transition: all 0.5s ease-in-out;
-  transform: translate(350px, 520px) rotateZ(337deg);
+  transform: translate(265px, 515px);
 }
 
 g:hover .aboutImage {
   height: 100px;
   width: 100px;
   filter: grayscale(0) drop-shadow(rgba(0, 0, 0, 0.8) 3px 5px 2px);
-  transform: translate(330px, 500px) rotateZ(337deg);
+  transform: translate(263px, 495px);
 }
 
 .educationImage {
@@ -18,14 +18,14 @@ g:hover .aboutImage {
   width: 80px;
   filter: grayscale(1) drop-shadow(rgba(0, 0, 0, 0.8) 3px 5px 2px);
   transition: all 0.5s ease-in-out;
-  transform: translate(23px, 185px) rotateZ(337deg);
+  transform: translate(265px, 18px) ;
 }
 
 g:hover .educationImage {
   height: 100px;
   width: 100px;
   filter: grayscale(0) drop-shadow(rgba(0, 0, 0, 0.8) 3px 5px 2px);
-  transform: translate(0px, 170px) rotateZ(337deg);
+  transform: translate(262px, 0px);
 }
 
 .skillsImage {
@@ -33,14 +33,14 @@ g:hover .educationImage {
   width: 80px;
   filter: grayscale(1) drop-shadow(rgba(0, 0, 0, 0.8) 3px 5px 2px);
   transition: all 0.5s ease-in-out;
-  transform: translate(488px, 375px) rotateZ(337deg)
+  transform: translate(488px, 375px) 
 }
 
 g:hover .skillsImage {
   height: 100px;
   width: 100px;
   filter: grayscale(0) drop-shadow(rgba(0, 0, 0, 0.8) 3px 5px 2px);
-  transform: translate(466px, 365px) rotateZ(337deg)
+  transform: translate(472px, 360px) 
 }
 
 .contactImage {
@@ -48,14 +48,14 @@ g:hover .skillsImage {
   width: 80px;
   filter: grayscale(1) drop-shadow(rgba(0, 0, 0, 0.8) 3px 5px 2px);
   transition: all 0.5s ease-in-out;
-  transform: translate(483px, 193px) rotateZ(337deg);
+  transform: translate(485px, 145px) ;
 }
 
 g:hover .contactImage {
   height: 100px;
   width: 100px;
   filter: grayscale(0) drop-shadow(rgba(0, 0, 0, 0.8) 3px 5px 2px);
-  transform: translate(470px, 183px) rotateZ(337deg);
+  transform: translate(485px, 135px) ;
 }
 
 .portfolioImage {
@@ -63,29 +63,14 @@ g:hover .contactImage {
   width: 80px;
   filter: grayscale(1) drop-shadow(rgba(0, 0, 0, 0.8) 3px 5px 2px);
   transition: all 0.5s ease-in-out;
-  transform: translate(25px, 380px) rotateZ(337deg);
+  transform: translate(60px, 138px) ;
 }
 
 g:hover .portfolioImage {
   height: 100px;
   width: 100px;
   filter: grayscale(0) drop-shadow(rgba(0, 0, 0, 0.8) 3px 5px 2px);
-  transform: translate(12px, 370px) rotateZ(337deg);
-}
-
-.clientImage {
-  height: 80px;
-  width: 80px;
-  filter: grayscale(1) drop-shadow(rgba(0, 0, 0, 0.8) 3px 5px 2px);
-  transition: all 0.5s ease-in-out;
-  transform: translate(162px, 55px) rotateZ(337deg);
-}
-
-g:hover .clientImage {
-  height: 100px;
-  width: 100px;
-  filter: grayscale(0) drop-shadow(rgba(0, 0, 0, 0.8) 3px 5px 2px);
-  transform: translate(145px, 35px) rotateZ(337deg);
+  transform: translate(45px, 125px) ;
 }
 
 .experienceImage {
@@ -93,42 +78,23 @@ g:hover .clientImage {
   width: 80px;
   filter: grayscale(1) drop-shadow(rgba(0, 0, 0, 0.8) 3px 5px 2px);
   transition: all 0.5s ease-in-out;
-  transform: translate(155px, 515px) rotateZ(337deg);
+  transform: translate(50px, 385px) ;
 }
 
 g:hover .experienceImage {
   height: 100px;
   width: 100px;
   filter: grayscale(0) drop-shadow(rgba(0, 0, 0, 0.8) 3px 5px 2px);
-  transform: translate(140px, 500px) rotateZ(337deg);
-}
-
-.libraryImage {
-  height: 80px;
-  width: 80px;
-  filter: grayscale(1) drop-shadow(rgba(0, 0, 0, 0.8) 3px 5px 2px);
-  transition: all 0.5s ease-in-out;
-  transform: translate(350px, 50px) rotateZ(337deg);
-}
-
-g:hover .libraryImage {
-  height: 100px;
-  width: 100px;
-  filter: grayscale(0) drop-shadow(rgba(0, 0, 0, 0.8) 3px 5px 2px);
-  transform: translate(335px, 30px) rotateZ(337deg);
-}
-
-svg {
-  transform: rotate(22deg);
+  transform: translate(42px, 365px) ;
 }
 
 svg > text {
   font-weight: 1000;
   font-size: 1.6em;
   text-shadow: 1px;
+  transform: translate(135px,-80px);
 }
 
-svg text,
 svg g text,
 svg g image {
   transform: rotate(-22deg);
@@ -153,7 +119,7 @@ g text {
 g.activeMenu path {
   stroke: rgb(198, 207, 211);
   stroke-width: 10px;
-  stroke-dasharray: 235.5 440;
+  stroke-dasharray: 310 475;
 }
 
 g:hover {

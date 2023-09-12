@@ -35,9 +35,9 @@ export default function ContactPage() {
   });
 
   const handleSubmit = ({ ...values }, helpers) => {
-    console.log("values", values);
+    // console.log("values", values);
     toast.success("Email sent successfully!", { theme: "dark" });
-    toast.error("Something went wrong. Try again!", { theme: "dark" });
+    // toast.error("Something went wrong. Try again!", { theme: "dark" });
     helpers.resetForm();
   };
 

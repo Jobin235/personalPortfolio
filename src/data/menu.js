@@ -24,27 +24,16 @@ export const data = [
     label: "Portfolio",
   },
   {
-    menu: "Contact",
-    image: require("../assets/images/sidemenu/contact.png"),
-    alt: "contact",
-    label: "Contact",
-  },
-  {
     menu: "Education",
     image: require("../assets/images/sidemenu/education.png"),
     alt: "education",
     label: "Education Timeline",
   },
   {
-    menu: "Library",
-    image: require("../assets/images/sidemenu/library.png"),
-    alt: "library",
-    label: "Libraries Used",
+    menu: "Contact",
+    image: require("../assets/images/sidemenu/contact.png"),
+    alt: "contact",
+    label: "Contact",
   },
-  {
-    menu: "Clients",
-    image: require("../assets/images/sidemenu/client.png"),
-    alt: "client",
-    label: "Clients",
-  },
+  
 ];
