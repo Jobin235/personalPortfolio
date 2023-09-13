@@ -104,7 +104,7 @@ g path {
   stroke: rgba(0, 0, 0, 0.3);
   filter: drop-shadow(2px 4px 6px black);
   stroke-width: 5px;
-  stroke-dasharray: 235.5 440;
+  stroke-dasharray: 308.5 475;
   transform-origin: center center;
   transform: scale(0.98);
   transform-box: fill-box;
