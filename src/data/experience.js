@@ -1,7 +1,14 @@
 export const data = [
   {
+    designation: "Team Lead - PERN",
+    duration: "08/2023 - present",
+    company: "Digistore Pay - Kottayam, India",
+    description:
+      "At Digistore Pay, a payments aggregator startup, I worked for more than 1 year. My responsibilities included architecting and revamping their core business website and app. I gained immense experience working with dockerization and azure cloud services.",
+  },
+  {
     designation: "Full-Stack Developer - Freelance",
-    duration: "11/2022 - present",
+    duration: "11/2022 - 08/2023",
     company: "Skillojo, RhinoPay, MasterFraming - Australia",
     description:
       "As a remote freelance developer, I have worked with clients like Skillojo, MasterFraming, and Rhinopay. Skillojo is an AI-powered employment portal, while MasterFraming specializes in online framing services and Rhinopay is a payments platform. My services for these clients included design, development, bug fixing, building authentication systems, and testing. I have been freelancing for over 6 months, gaining valuable experience and expertise.",

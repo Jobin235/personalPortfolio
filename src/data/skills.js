@@ -27,6 +27,11 @@ export const data = [
         logo: require("../assets/images/skills/css3.png"),
         rating: 4,
       },
+      {
+        skill: "Next JS",
+        logo: require("../assets/images/skills/nextjs.webp"),
+        rating: 4,
+      },
     ],
   },
   {

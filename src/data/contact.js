@@ -87,7 +87,7 @@ export const serviceData = [
 ];
 
 export const budgetData = [
-  "Less than $2,000",
-  "$2,000 - $10,000",
-  "More than $10,000",
+  "Less than $1,000",
+  "$1,000 - $5,000",
+  "More than $5,000",
 ];

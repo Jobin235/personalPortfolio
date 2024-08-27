@@ -46,7 +46,7 @@ export default function AboutPage() {
                 <div className={styles.statusContainer}>
                   <Reveal>
                     <div className={styles.status}>
-                      <span className={styles.experience}>4+ </span>
+                      <span className={styles.experience}>5+ </span>
                       <p className={styles.text}>Years of experience</p>
                     </div>
                   </Reveal>

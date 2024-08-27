@@ -1,5 +1,23 @@
 export const data = [
   {
+    projectName: "Digistorepay",
+    projectType: "Company Project",
+    companylogo: require("../assets/images/logos/digistorepay.png"),
+    projectImage: require("../assets/images/screens/digistorepay_screen.png"),
+    description:
+      "Digistorepay is a payments aggregator platform that streamline your business transactions with our secure and user-friendly payment solutions and services.",
+    status: "Online",
+    tech: ["React JS", "PostgreSQL", "Node JS", "Azure"],
+    details: [
+      {
+        id: 8,
+        duration: "1 Year",
+        role: "Team Lead (PERN)",
+      },
+    ],
+    link: "https://www.digistorepay.com/",
+  },
+  {
     projectName: "Skillojo",
     projectType: "Freelance Client",
     companylogo: require("../assets/images/logos/skillojo.webp"),
