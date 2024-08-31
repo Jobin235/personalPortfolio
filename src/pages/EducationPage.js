@@ -13,64 +13,75 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 
 import { data } from "../data/education";
+import { Helmet } from "react-helmet-async";
 
 export default function EducationPage() {
   return (
-    <div className={styles.container}>
-      <HeaderText text="Education Timeline" />
-      <PageTransition>
-        <div className={styles.content}>
-          <div className={styles.card}>
-            <div className={styles.cardContent}>
-              <div className={styles.details}>
-                <VerticalTimeline>
-                  {data.map((data) => {
-                    return (
-                      <VerticalTimelineElement
-                        className="vertical-timeline-element"
-                        contentStyle={{
-                          background: "rgb(38, 38, 41)",
-                          color: "#fff",
-                        }}
-                        contentArrowStyle={{
-                          borderRight: "7px solid  rgb(38, 38, 41)",
-                        }}
-                        date={data.duration}
-                        dateClassName={styles.date}
-                        iconStyle={{
-                          background: "rgb(24, 24, 27)",
-                          color: "#fff",
-                        }}
-                        // icon={<WorkIcon />}
-                      >
-                        <Reveal>
-                          <h3
-                            className="vertical-timeline-element-title"
-                            id={styles.education}
-                          >
-                            {data.education}
-                          </h3>
-                        </Reveal>
-                        <Reveal>
-                          <h4
-                            id={styles.institute}
-                            className="vertical-timeline-element-subtitle"
-                          >
-                            {data.institute}
-                          </h4>
-                        </Reveal>
-                        <Reveal>
-                          <p id={styles.description}>{data.description}</p>
-                        </Reveal>
-                      </VerticalTimelineElement>
-                    );
-                  })}
-                </VerticalTimeline>
+    <>
+      <Helmet>
+        <title>Jobin Joy - Education Qualifications</title>
+        <meta
+          name="description"
+          content="Know more about Jobin Joy - Full Stack Developer"
+        />
+        <link rel="canonical" href="https://jobinjoy.in/Education" />
+      </Helmet>
+      <div className={styles.container}>
+        <HeaderText text="Education Timeline" />
+        <PageTransition>
+          <div className={styles.content}>
+            <div className={styles.card}>
+              <div className={styles.cardContent}>
+                <div className={styles.details}>
+                  <VerticalTimeline>
+                    {data.map((data) => {
+                      return (
+                        <VerticalTimelineElement
+                          className="vertical-timeline-element"
+                          contentStyle={{
+                            background: "rgb(38, 38, 41)",
+                            color: "#fff",
+                          }}
+                          contentArrowStyle={{
+                            borderRight: "7px solid  rgb(38, 38, 41)",
+                          }}
+                          date={data.duration}
+                          dateClassName={styles.date}
+                          iconStyle={{
+                            background: "rgb(24, 24, 27)",
+                            color: "#fff",
+                          }}
+                          // icon={<WorkIcon />}
+                        >
+                          <Reveal>
+                            <h3
+                              className="vertical-timeline-element-title"
+                              id={styles.education}
+                            >
+                              {data.education}
+                            </h3>
+                          </Reveal>
+                          <Reveal>
+                            <h4
+                              id={styles.institute}
+                              className="vertical-timeline-element-subtitle"
+                            >
+                              {data.institute}
+                            </h4>
+                          </Reveal>
+                          <Reveal>
+                            <p id={styles.description}>{data.description}</p>
+                          </Reveal>
+                        </VerticalTimelineElement>
+                      );
+                    })}
+                  </VerticalTimeline>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </PageTransition>
-    </div>
+        </PageTransition>
+      </div>
+    </>
   );
 }
