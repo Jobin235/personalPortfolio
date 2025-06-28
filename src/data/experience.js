@@ -1,6 +1,6 @@
 export const data = [
   {
-    designation: "Team Lead - PERN",
+    designation: "Senior Software Engineer - PERN",
     duration: "08/2023 - present",
     company: "Digistore Pay - Kottayam, India",
     description:
